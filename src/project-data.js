@@ -65,5 +65,22 @@ export const projectData = {
       <p>Additionally, I created Python scripts to parse log files and visualize error rates, helping the team catch regressions earlier in the release cycle.</p>
     `,
     videoSrc: null
+  },
+  "churn-analyzer": {
+    title: "Customer Churn Prediction",
+    subtitle: "Telecommunications Data Analysis",
+    tags: ["Python", "Scikit-Learn", "Pandas", "Random Forest"],
+    description: `
+      <h2>Project Overview</h2>
+      <p>Targeting specific pain points in the telecommunications sector, I developed a machine learning model to predict customer churn. The goal was to identify at-risk customers early to enable proactive retention strategies.</p>
+      
+      <h2>Methodology</h2>
+      <p>The solution involved cleaning and preprocessing a dataset of customer profiles (demographics, services, payment info). I implemented <strong>One-Hot Encoding</strong> for categorical variables and utilized ensemble methods for prediction.</p>
+      
+      <h2>Technical Implementation</h2>
+      <p>Using <strong>Scikit-Learn</strong>, I trained and evaluated multiple models, including <strong>Logistic Regression</strong> and <strong>Random Forest Classifiers</strong>. The models were evaluated using balanced accuracy scores to handle class imbalance effectively.</p>
+    `,
+    mediaType: "image",
+    mediaSrc: "./churn_visual.png"
   }
 };
