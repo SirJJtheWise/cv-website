@@ -31,19 +31,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Content
     document.getElementById('p-content').innerHTML = data.description;
 
-    // Media (Video)
-    // Check if user has added a video path in data.js
-    if (data.videoSrc) {
-        const mediaContainer = document.getElementById('media-container');
-        mediaContainer.innerHTML = `
-      <video src="${data.videoSrc}" controls autoplay muted loop style="width:100%; height:100%; object-fit:contain;"></video>
-    `;
+    // Media (Video or Image)
+    // Check mediaType in data.js
+    const mediaContainer = document.getElementById('media-container');
+
+    if (data.mediaSrc) {
+        if (data.mediaType === 'video') {
+            mediaContainer.innerHTML = `
+        <video src="${data.mediaSrc}" controls autoplay muted loop style="width:100%; height:100%; object-fit:contain;"></video>
+      `;
+        } else if (data.mediaType === 'image') {
+            mediaContainer.innerHTML = `
+        <img src="${data.mediaSrc}" alt="${data.title} Visual" style="width:100%; height:100%; object-fit:contain;">
+      `;
+        }
     } else {
-        // Show placeholder if no video
-        const mediaContainer = document.getElementById('media-container');
+        // Show placeholder if no media
         mediaContainer.innerHTML = `
        <div style="text-align:center;">
-          <h3 style="color:#555; margin-bottom:0.5rem;">Video Coming Soon</h3>
+          <h3 style="color:#555; margin-bottom:0.5rem;">Visual Coming Soon</h3>
           <p style="color:#444;">Deploy to see updates</p>
        </div>
     `;
