@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO & Meta -->
+  <title>Jason Mann | CS Student & Developer</title>
+  <meta name="description"
+    content="Portfolio of Jason Mann, a Computer Science student featuring web development, software projects, and skills." />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="glass-panel">
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="./CV.pdf" target="_blank" style="color:var(--primary); font-weight:600;">Resume ↗</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1 class="gradient-text">Coding the Future</h1>
+      <p class="hero-subtitle">
+        Hi, I'm <strong>Jason Mann</strong>. A Computer Science Student building scalable software and premium web
+        experiences.
+      </p>
+      <div class="cta-group">
+        <div class="cta-group">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="./CV.pdf" target="_blank" class="btn btn-secondary">Download CV</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>↓</span>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="grid-layout" id="projects-grid">
+      <!-- Project 1 -->
+      <article class="project-card">
+        <div class="video-container">
+          <div class="placeholder-overlay">
+            <!-- Placeholder for video logic -->
+            <div
+              style="width:100%;height:100%;background:#111;display:flex;align-items:center;justify-content:center;color:#555;">
+              Video Preview
+            </div>
+          </div>
+          <div class="video-overlay">► Play Preview</div>
+        </div>
+        <div class="project-info">
+          <h3>Algorithm Visualizer</h3>
+          <p style="font-size:0.9rem; color:var(--text-muted); margin: 0.5rem 0;">
+            An interactive web tool visualizing sorting and pathfinding algorithms in real-time.
+          </p>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">D3.js</span>
+            <span class="tag">Algorithms</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card">
+        <div class="video-container">
+          <div
+            style="width:100%;height:100%;background:#111;display:flex;align-items:center;justify-content:center;color:#555;">
+            Video Preview
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>E-Commerce Platform</h3>
+          <p style="font-size:0.9rem; color:var(--text-muted); margin: 0.5rem 0;">
+            Full-stack e-commerce solution with payment processing and user dashboard.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Stripe</span>
+          </div>
+        </div>
+      </article>
+      <!-- Project 3 -->
+      <article class="project-card">
+        <div class="video-container">
+          <div
+            style="width:100%;height:100%;background:#111;display:flex;align-items:center;justify-content:center;color:#555;">
+            Video Preview
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>AI Chatbot Interface</h3>
+          <p style="font-size:0.9rem; color:var(--text-muted); margin: 0.5rem 0;">
+            A sleek interface for interacting with LLMs, featuring markdown support and history.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">WebSocket</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Technical Arsenal</h2>
+    <div style="display:grid; gap: 2rem; margin-top: 2rem;">
+
+      <div class="skill-category">
+        <h3>Languages</h3>
+        <div class="skill-grid">
+          <div class="skill-item">Python</div>
+          <div class="skill-item">Java</div>
+          <div class="skill-item">C++</div>
+          <div class="skill-item">JavaScript (ES6+)</div>
+          <div class="skill-item">SQL</div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Web Technologies</h3>
+        <div class="skill-grid">
+          <div class="skill-item">React / Vite</div>
+          <div class="skill-item">Node.js</div>
+          <div class="skill-item">HTML5 & CSS3</div>
+          <div class="skill-item">REST APIs</div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Tools & Platforms</h3>
+        <div class="skill-grid">
+          <div class="skill-item">Git & GitHub</div>
+          <div class="skill-item">Docker</div>
+          <div class="skill-item">Linux</div>
+          <div class="skill-item">AWS</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="glass-panel contact-container">
+      <h2 class="gradient-text">Let's Connect</h2>
+      <p style="margin: 1rem 0 2rem; color: var(--text-muted);">
+        I'm currently looking for internships and new opportunities. Whether you have a question or just want to say hi,
+        I'll try my best to get back to you!
+      </p>
+      <a href="mailto:jason.mann@example.com" class="btn btn-primary">Say Hello</a>
+
+      <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
+        <a href="#" style="opacity:0.7;">GitHub</a> •
+        <a href="#" style="opacity:0.7;">LinkedIn</a> •
+        <a href="#" style="opacity:0.7;">Twitter</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="text-align:center; padding: 2rem; opacity: 0.5; font-size: 0.8rem;">
+    &copy; 2026 Jason Mann. Built with Vite.
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
