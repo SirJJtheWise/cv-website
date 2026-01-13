@@ -46,13 +46,17 @@ import"./style-CIkEmENU.js";const o={"medical-ai":{title:"Simultaneous Tracking 
 
       <h2>Technical Stack</h2>
       <p>The solution uses a <strong>Flutter</strong> frontend for cross-platform mobile support and a <strong>Django Rest Framework</strong> backend. Data is managed via PostgreSQL (architected) and Azure Blob Storage, while the machine learning models were developed using Jupyter Notebooks and deployed on Azure.</p>
-    `,mediaType:"image",mediaSrc:"./Mapo.png"},automation:{title:"Test Automation Framework",subtitle:"Software Developer at WWK",tags:["Java","Python","Selenium","Data Analysis"],description:`
-      <h2>Professional Experience</h2>
-      <p>As a working student at WWK, I was responsible for improving the QA process. I developed automated testing tools in Java that reduced manual testing time significantly.</p>
+    `,mediaType:"image",mediaSrc:"./Mapo.png"},automation:{title:"Test Automation Framework",subtitle:"Working Student @ WWK insurance (Jun '23 - May '24)",tags:["Java","Playwright","Spring","Vue","Test Automation"],description:`
+      <h2>Role & Responsibilities</h2>
+      <p>As a working student in the IT Test Management & Infrastructure department, I was responsible for the maintenance and expansion of the corporate test automation framework.</p>
       
-      <h2>Data Analysis</h2>
-      <p>Additionally, I created Python scripts to parse log files and visualize error rates, helping the team catch regressions earlier in the release cycle.</p>
-    `,videoSrc:null},"churn-analyzer":{title:"Customer Churn Prediction",subtitle:"Telecommunications Data Analysis",tags:["Python","Scikit-Learn","Pandas","Random Forest"],description:`
+      <h2>Key contributions</h2>
+      <ul>
+        <li><strong>Automation Infrastructure:</strong> Supported the migration and introduction of <strong>Playwright</strong> for modern web testing, integrated with a Java/Spring ecosystem.</li>
+        <li><strong>Tool Development:</strong> Developed a bespoke <strong>Java application</strong> for automated document evaluation, significantly reducing manual analysis time.</li>
+        <li><strong>Maintenance:</strong> Managed and optimized locators within IntelliJ to ensure robust and clear test execution.</li>
+      </ul>
+    `,mediaType:"image",mediaSrc:"./WWk_logo.png"},"churn-analyzer":{title:"Customer Churn Prediction",subtitle:"Telecommunications Data Analysis",tags:["Python","Scikit-Learn","Pandas","Random Forest"],description:`
       <h2>Project Overview</h2>
       <p>Targeting specific pain points in the telecommunications sector, I developed a machine learning model to predict customer churn. The goal was to identify at-risk customers early to enable proactive retention strategies.</p>
       
@@ -61,11 +65,11 @@ import"./style-CIkEmENU.js";const o={"medical-ai":{title:"Simultaneous Tracking 
       
       <h2>Technical Implementation</h2>
       <p>Using <strong>Scikit-Learn</strong>, I trained and evaluated multiple models, including <strong>Logistic Regression</strong> and <strong>Random Forest Classifiers</strong>. The models were evaluated using balanced accuracy scores to handle class imbalance effectively.</p>
-    `,mediaType:"image",mediaSrc:"./churn_visual.png"}};document.addEventListener("DOMContentLoaded",()=>{const t=new URLSearchParams(window.location.search).get("id");if(!t||!o[t]){document.getElementById("p-title").textContent="Project Not Found",document.getElementById("p-subtitle").textContent="The project you are looking for does not exist.";return}const e=o[t];document.getElementById("p-title").innerHTML=e.title,document.getElementById("p-subtitle").textContent=e.subtitle;const a=document.getElementById("p-tags");a.innerHTML="",e.tags.forEach(r=>{const n=document.createElement("span");n.className="tag",n.textContent=r,a.appendChild(n)}),document.getElementById("p-content").innerHTML=e.description;const i=document.getElementById("media-container");e.mediaSrc?e.mediaType==="video"?i.innerHTML=`
+    `,mediaType:"image",mediaSrc:"./churn_visual.png"}};document.addEventListener("DOMContentLoaded",()=>{const t=new URLSearchParams(window.location.search).get("id");if(!t||!o[t]){document.getElementById("p-title").textContent="Project Not Found",document.getElementById("p-subtitle").textContent="The project you are looking for does not exist.";return}const e=o[t];document.getElementById("p-title").innerHTML=e.title,document.getElementById("p-subtitle").textContent=e.subtitle;const a=document.getElementById("p-tags");a.innerHTML="",e.tags.forEach(r=>{const i=document.createElement("span");i.className="tag",i.textContent=r,a.appendChild(i)}),document.getElementById("p-content").innerHTML=e.description;const n=document.getElementById("media-container");e.mediaSrc?e.mediaType==="video"?n.innerHTML=`
         <video src="${e.mediaSrc}" controls autoplay muted loop style="width:100%; height:100%; object-fit:contain;"></video>
-      `:e.mediaType==="image"&&(i.innerHTML=`
+      `:e.mediaType==="image"&&(n.innerHTML=`
         <img src="${e.mediaSrc}" alt="${e.title} Visual" style="width:100%; height:100%; object-fit:contain;">
-      `):i.innerHTML=`
+      `):n.innerHTML=`
        <div style="text-align:center;">
           <h3 style="color:#555; margin-bottom:0.5rem;">Visual Coming Soon</h3>
           <p style="color:#444;">Deploy to see updates</p>
