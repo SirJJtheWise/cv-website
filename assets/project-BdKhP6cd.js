@@ -56,7 +56,16 @@ import"./style-CIkEmENU.js";const o={"medical-ai":{title:"Simultaneous Tracking 
         <li><strong>Tool Development:</strong> Developed a bespoke <strong>Java application</strong> for automated document evaluation, significantly reducing manual analysis time.</li>
         <li><strong>Maintenance:</strong> Managed and optimized locators within IntelliJ to ensure robust and clear test execution.</li>
       </ul>
-    `,mediaType:"image",mediaSrc:"./WWk_logo.png"},"churn-analyzer":{title:"Customer Churn Prediction",subtitle:"Telecommunications Data Analysis",tags:["Python","Scikit-Learn","Pandas","Random Forest"],description:`
+    `,mediaType:"image",mediaSrc:"./WWk_logo.png"},"kako-ai":{title:"Kako AI",subtitle:"Currently Running Project",tags:["AI","Machine Learning","Innovation"],description:`
+      <h2>Project Overview</h2>
+      <p>An ongoing artificial intelligence initiative. Development is currently in progress.</p>
+    `,videoSrc:null},"llm-automation":{title:"LLM Business Automation",subtitle:"Currently Running Project",tags:["LLM","Python","Automation","Generative AI"],description:`
+      <h2>Project Overview</h2>
+      <p>Leveraging Large Language Models to automate complex business processes and workflows. Currently under active development.</p>
+    `,videoSrc:null},"review-analysis":{title:"Customer Review Analysis App",subtitle:"Currently Running Project",tags:["NLP","Sentiment Analysis","Python","Data Science"],description:`
+      <h2>Project Overview</h2>
+      <p>A comprehensive application to analyze customer feedback and extract actionable insights using Natural Language Processing techniques.</p>
+    `,videoSrc:null},"churn-analyzer":{title:"Customer Churn Prediction",subtitle:"Telecommunications Data Analysis",tags:["Python","Scikit-Learn","Pandas","Random Forest"],description:`
       <h2>Project Overview</h2>
       <p>Targeting specific pain points in the telecommunications sector, I developed a machine learning model to predict customer churn. The goal was to identify at-risk customers early to enable proactive retention strategies.</p>
       
