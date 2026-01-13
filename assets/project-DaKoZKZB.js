@@ -1,4 +1,4 @@
-import"./style-CIkEmENU.js";const a={"medical-ai":{title:"Simultaneous Tracking & Segmentation",subtitle:"Bachelor Thesis: Carotid Plaque Analysis",tags:["Python","PyTorch","Deep Learning","Computer Vision","Medical Imaging"],description:`
+import"./style-CIkEmENU.js";const o={"medical-ai":{title:"Simultaneous Tracking & Segmentation",subtitle:"Bachelor Thesis: Carotid Plaque Analysis",tags:["Python","PyTorch","Deep Learning","Computer Vision","Medical Imaging"],description:`
       <h2>Motivation & Objectives</h2>
       <p>Stroke is a leading cause of death worldwide. The state of the carotid plaque indicates the likelihood of a stroke. Ultrasound is a low-cost, noninvasive imaging method but suffers from noise and occlusion.</p>
       <p>My thesis focused on creating a network to <strong>segment and track carotid plaques</strong> in ultrasound sequences to aid diagnosis and maximize accuracy.</p>
@@ -18,13 +18,22 @@ import"./style-CIkEmENU.js";const a={"medical-ai":{title:"Simultaneous Tracking 
          <p style="font-size:0.9rem; color:#888; margin-bottom:0.5rem;">Quantitative Comparison (DSC Scores)</p>
          <img src="./Medical_DeepLearning_performance_graph.png" alt="Performance Graph" style="max-width:100%; border-radius:8px; border:1px solid #333;">
       </div>
-    `,mediaType:"image",mediaSrc:"./Medical_DeepLearning_Network_Architecure.png"},hpc:{title:"HPC Algorithm Optimization",subtitle:"Leibniz Supercomputing Centre (LRZ)",tags:["C++","C","GPU","CUDA","MPI"],description:`
-      <h2>Overview</h2>
-      <p>Working at the Leibniz Supercomputing Centre, I focused on pushing the limits of computational performance. My role involved optimizing scientific algorithms to run efficiently on high-performance clusters.</p>
+    `,mediaType:"image",mediaSrc:"./Medical_DeepLearning_Network_Architecure.png"},hpc:{title:"HPC Performance Engineering",subtitle:"BEAST Lab @ Leibniz Supercomputing Centre",tags:["C++","OpenMP","MPI","AVX512","ARM SVE","Performance Analysis"],description:`
+      <h2>BEAST Lab Overview</h2>
+      <p>Participated in the <strong>Bavarian Energy Architecture and Software Testbed (BEAST)</strong> lab at LRZ. The focus was on the experimental evaluation of single-node performance across a diverse range of next-generation architectures.</p>
       
-      <h2>Optimization Strategy</h2>
-      <p>I refactored legacy C and C++ codebases to leverage parallel processing capabilities. This involved memory management optimization and implementing GPU kernels.</p>
-    `,videoSrc:null},hackatum:{title:"Open Source Map App",subtitle:"Hackatum 2022 Project",tags:["Flutter","Dart","Django","Android"],description:`
+      <h2>Target Architectures</h2>
+      <p>I benchmarked and optimized kernels for specific instruction sets and hardware constraints on cutting-edge systems:</p>
+      <ul>
+        <li><strong>Intel Icelake</strong> (x86-64 + AVX512)</li>
+        <li><strong>AMD Rome</strong> (x86-64 + AVX2)</li>
+        <li><strong>Marvell ThunderX2</strong> (ARM AArch64 + Neon)</li>
+        <li><strong>Fujitsu A64FX</strong> (ARM AArch64 + SVE)</li>
+      </ul>
+
+      <h2>Optimization & Analysis</h2>
+      <p>The work involved deep performance analysis and code tuning using <strong>OpenMP</strong> and SIMD vectorization. I optimized memory access patterns (Triad/Traversal) and compute-bound kernels (Matrix Multiplication) to exploit the specific capabilities of each architecture, such as the scalability of ARM SVE on the A64FX.</p>
+    `,mediaType:"image",mediaSrc:"./HPC image.png"},hackatum:{title:"Open Source Map App",subtitle:"Hackatum 2022 Project",tags:["Flutter","Dart","Django","Android"],description:`
       <h2>The Hackathon Entry</h2>
       <p>Built during the 48-hour Hackatum event, this Android application aims to gamify the collection of OpenStreetMap data.</p>
       
@@ -45,11 +54,11 @@ import"./style-CIkEmENU.js";const a={"medical-ai":{title:"Simultaneous Tracking 
       
       <h2>Technical Implementation</h2>
       <p>Using <strong>Scikit-Learn</strong>, I trained and evaluated multiple models, including <strong>Logistic Regression</strong> and <strong>Random Forest Classifiers</strong>. The models were evaluated using balanced accuracy scores to handle class imbalance effectively.</p>
-    `,mediaType:"image",mediaSrc:"./churn_visual.png"}};document.addEventListener("DOMContentLoaded",()=>{const t=new URLSearchParams(window.location.search).get("id");if(!t||!a[t]){document.getElementById("p-title").textContent="Project Not Found",document.getElementById("p-subtitle").textContent="The project you are looking for does not exist.";return}const e=a[t];document.getElementById("p-title").innerHTML=e.title,document.getElementById("p-subtitle").textContent=e.subtitle;const o=document.getElementById("p-tags");o.innerHTML="",e.tags.forEach(r=>{const n=document.createElement("span");n.className="tag",n.textContent=r,o.appendChild(n)}),document.getElementById("p-content").innerHTML=e.description;const i=document.getElementById("media-container");e.mediaSrc?e.mediaType==="video"?i.innerHTML=`
+    `,mediaType:"image",mediaSrc:"./churn_visual.png"}};document.addEventListener("DOMContentLoaded",()=>{const t=new URLSearchParams(window.location.search).get("id");if(!t||!o[t]){document.getElementById("p-title").textContent="Project Not Found",document.getElementById("p-subtitle").textContent="The project you are looking for does not exist.";return}const e=o[t];document.getElementById("p-title").innerHTML=e.title,document.getElementById("p-subtitle").textContent=e.subtitle;const a=document.getElementById("p-tags");a.innerHTML="",e.tags.forEach(r=>{const i=document.createElement("span");i.className="tag",i.textContent=r,a.appendChild(i)}),document.getElementById("p-content").innerHTML=e.description;const n=document.getElementById("media-container");e.mediaSrc?e.mediaType==="video"?n.innerHTML=`
         <video src="${e.mediaSrc}" controls autoplay muted loop style="width:100%; height:100%; object-fit:contain;"></video>
-      `:e.mediaType==="image"&&(i.innerHTML=`
+      `:e.mediaType==="image"&&(n.innerHTML=`
         <img src="${e.mediaSrc}" alt="${e.title} Visual" style="width:100%; height:100%; object-fit:contain;">
-      `):i.innerHTML=`
+      `):n.innerHTML=`
        <div style="text-align:center;">
           <h3 style="color:#555; margin-bottom:0.5rem;">Visual Coming Soon</h3>
           <p style="color:#444;">Deploy to see updates</p>
