@@ -1,16 +1,4 @@
 import"./style-CAQyUPWV.js";const o={"medical-ai":{title:"Simultaneous Tracking & Segmentation",subtitle:"Bachelor Thesis: Carotid Plaque Analysis",tags:["Python","PyTorch","Deep Learning","Computer Vision","Medical Imaging"],description:`
-      <h2>Motivation & Objectives</h2>
-      <p>Stroke is a leading cause of death worldwide. The state of the carotid plaque indicates the likelihood of a stroke. Ultrasound is a low-cost, noninvasive imaging method but suffers from noise and occlusion.</p>
-      <p>My thesis focused on creating a network to <strong>segment and track carotid plaques</strong> in ultrasound sequences to aid diagnosis and maximize accuracy.</p>
-      
-      <h2>Proposed Method</h2>
-      <p>I designed a novel architecture combining a <strong>Tracking Encoder</strong> (inspired by DiMP) and a <strong>Segmentation Decoder</strong> (using refinement modules). This hybrid approach leverages temporal information from tracking to improve segmentation robustness.</p>
-      
-      <div style="margin: 2rem 0; text-align:center;">
-         <p style="font-size:0.9rem; color:#888; margin-bottom:0.5rem;">Qualitative Results: Example Segmentation</p>
-         <img src="./Example_segmentation.png" alt="Segmentation Example" style="max-width:100%; border-radius:8px; border:1px solid #333;">
-      </div>
-
       <h2>Results & Performance</h2>
       <p>The network was trained on a dataset from Klinikum West covering 18 patients (~4000 frames). The results showed performance on par with state-of-the-art networks like DeepLab3+, with improved robustness in vessel area tracking.</p>
 
