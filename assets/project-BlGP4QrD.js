@@ -33,12 +33,19 @@ import"./style-CIkEmENU.js";const o={"medical-ai":{title:"Simultaneous Tracking 
 
       <h2>Optimization & Analysis</h2>
       <p>The work involved deep performance analysis and code tuning using <strong>OpenMP</strong> and SIMD vectorization. I optimized memory access patterns (Triad/Traversal) and compute-bound kernels (Matrix Multiplication) to exploit the specific capabilities of each architecture, such as the scalability of ARM SVE on the A64FX.</p>
-    `,mediaType:"image",mediaSrc:"./HPC image.png"},hackatum:{title:"Open Source Map App",subtitle:"Hackatum 2022 Project",tags:["Flutter","Dart","Django","Android"],description:`
-      <h2>The Hackathon Entry</h2>
-      <p>Built during the 48-hour Hackatum event, this Android application aims to gamify the collection of OpenStreetMap data.</p>
+    `,mediaType:"image",mediaSrc:"./HPC image.png"},hackatum:{title:"Gamified OpenStreetMap Tracker",subtitle:"Hackatum Project: Full-Stack Mobile App",tags:["Flutter","Django","Azure","Machine Learning","PostgreSQL"],description:`
+      <h2>Project Overview</h2>
+      <p>Developed a full-stack mobile application that gamifies the process of improving OpenStreetMap (OSM) data. The app enables users to identify, report, and fix road/mapping issues in their local neighborhoods through a competitive interface. By integrating machine learning for automated issue verification, the system incentivizes community contributions.</p>
       
-      <h2>Full Stack Implementation</h2>
-      <p>I worked on the frontend using Flutter to ensure a smooth, native-like experience on Android, while the backend was built with Django to handle geospatial data queries.</p>
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>Interactive Mapping:</strong> Real-time visualization of OSM data and pending issues using <code>flutter_map</code>.</li>
+        <li><strong>Gamification:</strong> A competitive "race" mechanic where users earn points and level up by resolving discrepancies.</li>
+        <li><strong>AI-Powered Verification:</strong> Integrated <strong>Azure Custom Vision</strong> to automatically classify and verify user-submitted images of road conditions.</li>
+      </ul>
+
+      <h2>Technical Stack</h2>
+      <p>The solution uses a <strong>Flutter</strong> frontend for cross-platform mobile support and a <strong>Django Rest Framework</strong> backend. Data is managed via PostgreSQL (architected) and Azure Blob Storage, while the machine learning models were developed using Jupyter Notebooks and deployed on Azure.</p>
     `,videoSrc:null},automation:{title:"Test Automation Framework",subtitle:"Software Developer at WWK",tags:["Java","Python","Selenium","Data Analysis"],description:`
       <h2>Professional Experience</h2>
       <p>As a working student at WWK, I was responsible for improving the QA process. I developed automated testing tools in Java that reduced manual testing time significantly.</p>
@@ -54,11 +61,11 @@ import"./style-CIkEmENU.js";const o={"medical-ai":{title:"Simultaneous Tracking 
       
       <h2>Technical Implementation</h2>
       <p>Using <strong>Scikit-Learn</strong>, I trained and evaluated multiple models, including <strong>Logistic Regression</strong> and <strong>Random Forest Classifiers</strong>. The models were evaluated using balanced accuracy scores to handle class imbalance effectively.</p>
-    `,mediaType:"image",mediaSrc:"./churn_visual.png"}};document.addEventListener("DOMContentLoaded",()=>{const t=new URLSearchParams(window.location.search).get("id");if(!t||!o[t]){document.getElementById("p-title").textContent="Project Not Found",document.getElementById("p-subtitle").textContent="The project you are looking for does not exist.";return}const e=o[t];document.getElementById("p-title").innerHTML=e.title,document.getElementById("p-subtitle").textContent=e.subtitle;const a=document.getElementById("p-tags");a.innerHTML="",e.tags.forEach(r=>{const i=document.createElement("span");i.className="tag",i.textContent=r,a.appendChild(i)}),document.getElementById("p-content").innerHTML=e.description;const n=document.getElementById("media-container");e.mediaSrc?e.mediaType==="video"?n.innerHTML=`
+    `,mediaType:"image",mediaSrc:"./churn_visual.png"}};document.addEventListener("DOMContentLoaded",()=>{const t=new URLSearchParams(window.location.search).get("id");if(!t||!o[t]){document.getElementById("p-title").textContent="Project Not Found",document.getElementById("p-subtitle").textContent="The project you are looking for does not exist.";return}const e=o[t];document.getElementById("p-title").innerHTML=e.title,document.getElementById("p-subtitle").textContent=e.subtitle;const a=document.getElementById("p-tags");a.innerHTML="",e.tags.forEach(r=>{const n=document.createElement("span");n.className="tag",n.textContent=r,a.appendChild(n)}),document.getElementById("p-content").innerHTML=e.description;const i=document.getElementById("media-container");e.mediaSrc?e.mediaType==="video"?i.innerHTML=`
         <video src="${e.mediaSrc}" controls autoplay muted loop style="width:100%; height:100%; object-fit:contain;"></video>
-      `:e.mediaType==="image"&&(n.innerHTML=`
+      `:e.mediaType==="image"&&(i.innerHTML=`
         <img src="${e.mediaSrc}" alt="${e.title} Visual" style="width:100%; height:100%; object-fit:contain;">
-      `):n.innerHTML=`
+      `):i.innerHTML=`
        <div style="text-align:center;">
           <h3 style="color:#555; margin-bottom:0.5rem;">Visual Coming Soon</h3>
           <p style="color:#444;">Deploy to see updates</p>
