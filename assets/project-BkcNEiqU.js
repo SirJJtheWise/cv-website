@@ -46,7 +46,7 @@ import"./style-CIkEmENU.js";const o={"medical-ai":{title:"Simultaneous Tracking 
 
       <h2>Technical Stack</h2>
       <p>The solution uses a <strong>Flutter</strong> frontend for cross-platform mobile support and a <strong>Django Rest Framework</strong> backend. Data is managed via PostgreSQL (architected) and Azure Blob Storage, while the machine learning models were developed using Jupyter Notebooks and deployed on Azure.</p>
-    `,videoSrc:null},automation:{title:"Test Automation Framework",subtitle:"Software Developer at WWK",tags:["Java","Python","Selenium","Data Analysis"],description:`
+    `,mediaType:"image",mediaSrc:"./Mapo.png"},automation:{title:"Test Automation Framework",subtitle:"Software Developer at WWK",tags:["Java","Python","Selenium","Data Analysis"],description:`
       <h2>Professional Experience</h2>
       <p>As a working student at WWK, I was responsible for improving the QA process. I developed automated testing tools in Java that reduced manual testing time significantly.</p>
       
