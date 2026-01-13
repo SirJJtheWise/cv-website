@@ -1,12 +1,22 @@
 import"./style-CAQyUPWV.js";const o={"medical-ai":{title:"Simultaneous Tracking & Segmentation",subtitle:"Bachelor Thesis: Carotid Plaque Analysis",tags:["Python","PyTorch","Deep Learning","Computer Vision","Medical Imaging"],description:`
-      <h2>Results & Performance</h2>
-      <p>The network was trained on a dataset from Klinikum West covering 18 patients (~4000 frames). The results showed performance on par with state-of-the-art networks like DeepLab3+, with improved robustness in vessel area tracking.</p>
+      <h2>Motivation & Objectives</h2>
+      <p>Stroke is a leading cause of death worldwide. The state of the carotid plaque indicates the likelihood of a stroke. Ultrasound is a low-cost, noninvasive imaging method but suffers from noise and occlusion.</p>
+      <p>My thesis focused on creating a network to <strong>segment and track carotid plaques</strong> in ultrasound sequences to aid diagnosis and maximize accuracy.</p>
+      
+      <h2>Methodology</h2>
+      <p>I designed a novel hybrid architecture combining:</p>
+      <ul>
+        <li><strong>Tracking Encoder:</strong> Based on the <em>DiMP</em> architecture, using an iterative optimization process to maximize discriminative tracking power.</li>
+        <li><strong>Segmentation Decoder:</strong> Utilizes refinement modules (inspired by <em>SiamMask</em>) to produce precise segmentation masks.</li>
+      </ul>
+      <p>The encoder focuses on the vessel area via tracking, which significantly increases the robustness of the segmentation against ultrasound noise.</p>
 
-      <div style="margin: 2rem 0; text-align:center;">
-         <p style="font-size:0.9rem; color:#888; margin-bottom:0.5rem;">Quantitative Comparison (DSC Scores)</p>
-         <img src="./Medical_DeepLearning_performance_graph.png" alt="Performance Graph" style="max-width:100%; border-radius:8px; border:1px solid #333;">
-      </div>
-    `,mediaType:"image",mediaSrc:"./Medical_DeepLearning_Network_Architecure.png"},hpc:{title:"HPC Performance Engineering",subtitle:"BEAST Lab @ Leibniz Supercomputing Centre",tags:["C++","OpenMP","MPI","AVX512","ARM SVE","Performance Analysis"],description:`
+      <h2>Dataset & Experiments</h2>
+      <p>The dataset was created in collaboration with <strong>Klinikum West</strong>, comprising B-Mode ultrasound sequences from <strong>18 patients</strong> (approx. 4000 vessel frames and 3400 plaque frames). Ground truth masks were manually annotated.</p>
+
+      <h2>Results</h2>
+      <p>The network achieved performance on par with state-of-the-art semantic segmentation networks like <strong>DeepLab3+</strong>, while demonstrating superior robustness in maintaining temporal consistency across video frames.</p>
+    `,mediaType:"image",mediaSrc:"./unet_ultrasound.png"},hpc:{title:"HPC Performance Engineering",subtitle:"BEAST Lab @ Leibniz Supercomputing Centre",tags:["C++","OpenMP","MPI","AVX512","ARM SVE","Performance Analysis"],description:`
       <h2>BEAST Lab Overview</h2>
       <p>Participated in the <strong>Bavarian Energy Architecture and Software Testbed (BEAST)</strong> lab at LRZ. The focus was on the experimental evaluation of single-node performance across a diverse range of next-generation architectures.</p>
       
@@ -62,7 +72,7 @@ import"./style-CAQyUPWV.js";const o={"medical-ai":{title:"Simultaneous Tracking 
       
       <h2>Technical Implementation</h2>
       <p>Using <strong>Scikit-Learn</strong>, I trained and evaluated multiple models, including <strong>Logistic Regression</strong> and <strong>Random Forest Classifiers</strong>. The models were evaluated using balanced accuracy scores to handle class imbalance effectively.</p>
-    `,mediaType:"image",mediaSrc:"./churn_visual.png"}};document.addEventListener("DOMContentLoaded",()=>{const t=new URLSearchParams(window.location.search).get("id");if(!t||!o[t]){document.getElementById("p-title").textContent="Project Not Found",document.getElementById("p-subtitle").textContent="The project you are looking for does not exist.";return}const e=o[t];document.getElementById("p-title").innerHTML=e.title,document.getElementById("p-subtitle").textContent=e.subtitle;const a=document.getElementById("p-tags");a.innerHTML="",e.tags.forEach(r=>{const i=document.createElement("span");i.className="tag",i.textContent=r,a.appendChild(i)}),document.getElementById("p-content").innerHTML=e.description;const n=document.getElementById("media-container");e.mediaSrc?e.mediaType==="video"?n.innerHTML=`
+    `,mediaType:"image",mediaSrc:"./churn_visual.png"}};document.addEventListener("DOMContentLoaded",()=>{const t=new URLSearchParams(window.location.search).get("id");if(!t||!o[t]){document.getElementById("p-title").textContent="Project Not Found",document.getElementById("p-subtitle").textContent="The project you are looking for does not exist.";return}const e=o[t];document.getElementById("p-title").innerHTML=e.title,document.getElementById("p-subtitle").textContent=e.subtitle;const a=document.getElementById("p-tags");a.innerHTML="",e.tags.forEach(s=>{const i=document.createElement("span");i.className="tag",i.textContent=s,a.appendChild(i)}),document.getElementById("p-content").innerHTML=e.description;const n=document.getElementById("media-container");e.mediaSrc?e.mediaType==="video"?n.innerHTML=`
         <video src="${e.mediaSrc}" controls autoplay muted loop style="width:100%; height:100%; object-fit:contain;"></video>
       `:e.mediaType==="image"&&(n.innerHTML=`
         <img src="${e.mediaSrc}" alt="${e.title} Visual" style="width:100%; height:100%; object-fit:contain;">
