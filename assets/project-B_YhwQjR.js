@@ -74,7 +74,7 @@ import"./style-CTz7fj_L.js";const a={"medical-ai":{title:"Simultaneous Tracking 
         <li><strong>Database Management:</strong> Utilizing <strong>Xano</strong> databases for scalable and efficient backend operations.</li>
         <li><strong>API Integration:</strong> Developing extensive API integrations connecting core business tools like <strong>HubSpot</strong>, <strong>Shopify</strong>, and <strong>Microsoft Teams</strong> to unify operational communications.</li>
       </ul>
-    `,mediaType:"image",mediaSrc:"./emobilio_automation.png"},"review-analysis":{title:"AI Customer Review Analysis",subtitle:"Working Student @ e-mobilio",tags:["Fonio.ai","Docsbot","AI Agents","NLP"],description:`
+    `,mediaType:"image",mediaSrc:"./emobilio_automation.svg"},"review-analysis":{title:"AI Customer Review Analysis",subtitle:"Working Student @ e-mobilio",tags:["Fonio.ai","Docsbot","AI Agents","NLP"],description:`
       <h2>Project Overview</h2>
       <p>Developed an intelligent application to analyze customer feedback and extract actionable business insights during my time at <strong>e-mobilio</strong>.</p>
       
@@ -84,7 +84,7 @@ import"./style-CTz7fj_L.js";const a={"medical-ai":{title:"Simultaneous Tracking 
         <li><strong>AI Tools:</strong> Extensively utilized <strong>Fonio.ai</strong> and <strong>Docsbot</strong> to develop conversational agents and analytical bots.</li>
         <li><strong>Insight Generation:</strong> The system automatically categorizes reviews, identifies trends, and highlights areas for improvement.</li>
       </ul>
-    `,mediaType:"image",mediaSrc:"./emobilio_review.png"},"churn-analyzer":{title:"Customer Churn Prediction",subtitle:"Telecommunications Data Analysis",tags:["Python","Scikit-Learn","Pandas","Random Forest"],description:`
+    `,mediaType:"image",mediaSrc:"./emobilio_review.svg"},"churn-analyzer":{title:"Customer Churn Prediction",subtitle:"Telecommunications Data Analysis",tags:["Python","Scikit-Learn","Pandas","Random Forest"],description:`
       <h2>Project Overview</h2>
       <p>Targeting specific pain points in the telecommunications sector, I developed a machine learning model to predict customer churn. The goal was to identify at-risk customers early to enable proactive retention strategies.</p>
       
