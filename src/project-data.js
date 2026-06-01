@@ -121,7 +121,7 @@ export const projectData = {
       </ul>
     `,
     mediaType: "image",
-    mediaSrc: "./emobilio_automation.svg"
+    mediaSrc: "./emobilio_automation.png"
   },
   "review-analysis": {
     title: "AI Customer Review Analysis",
@@ -139,7 +139,7 @@ export const projectData = {
       </ul>
     `,
     mediaType: "image",
-    mediaSrc: "./emobilio_review.svg"
+    mediaSrc: "./emobilio_review.png"
   },
   "churn-analyzer": {
     title: "Customer Churn Prediction",
