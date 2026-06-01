@@ -120,7 +120,8 @@ export const projectData = {
         <li><strong>API Integration:</strong> Developing extensive API integrations connecting core business tools like <strong>HubSpot</strong>, <strong>Shopify</strong>, and <strong>Microsoft Teams</strong> to unify operational communications.</li>
       </ul>
     `,
-    videoSrc: null
+    mediaType: "image",
+    mediaSrc: "./emobilio_automation.png"
   },
   "review-analysis": {
     title: "AI Customer Review Analysis",
@@ -137,7 +138,8 @@ export const projectData = {
         <li><strong>Insight Generation:</strong> The system automatically categorizes reviews, identifies trends, and highlights areas for improvement.</li>
       </ul>
     `,
-    videoSrc: null
+    mediaType: "image",
+    mediaSrc: "./emobilio_review.png"
   },
   "churn-analyzer": {
     title: "Customer Churn Prediction",
