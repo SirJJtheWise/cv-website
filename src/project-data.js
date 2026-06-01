@@ -105,41 +105,24 @@ export const projectData = {
     mediaType: "image",
     mediaSrc: "./bom_table_edit_new.png"
   },
-  "llm-automation": {
-    title: "Business AI Automation",
+  "emobilio": {
+    title: "Fullstack AI & Business Automation",
     subtitle: "Working Student @ e-mobilio",
-    tags: ["n8n", "Xano DB", "HubSpot", "Shopify", "API Integration"],
+    tags: ["n8n", "Xano", "Shopify", "Fonio AI", "Docsbot", "Azure"],
     description: `
       <h2>Role & Focus</h2>
-      <p>As a Working Student at <strong>e-mobilio</strong>, I specialize in streamlining complex business operations through advanced workflow automation and robust data architectures.</p>
+      <p>As a Working Student at <strong>e-mobilio</strong>, I specialized in building fullstack applications and streamlining complex business operations through advanced workflow automation and robust data architectures.</p>
       
-      <h2>Key Integrations & Technologies</h2>
+      <h2>Architecture & Orchestration</h2>
+      <p>I utilized <strong>n8n</strong> as the central orchestration hub to seamlessly connect and manage various microservices and enterprise tools.</p>
       <ul>
-        <li><strong>Workflow Automation:</strong> Leveraging <strong>n8n</strong> to design and implement seamless data flows across enterprise platforms.</li>
-        <li><strong>Database Management:</strong> Utilizing <strong>Xano</strong> databases for scalable and efficient backend operations.</li>
-        <li><strong>API Integration:</strong> Developing extensive API integrations connecting core business tools like <strong>HubSpot</strong>, <strong>Shopify</strong>, and <strong>Microsoft Teams</strong> to unify operational communications.</li>
+        <li><strong>Database & Logic:</strong> Built scalable and efficient backend operations using <strong>Xano</strong> and deployed infrastructure on <strong>Azure</strong>.</li>
+        <li><strong>Frontend & Integrations:</strong> Developed front-end UIs with <strong>Bubble.io</strong> and integrated core tools like <strong>Shopify</strong>, <strong>Sendgrid</strong>, and <strong>Microsoft Teams</strong> for automated communications and commerce.</li>
+        <li><strong>AI Agent Development:</strong> Built and deployed custom AI Agents using <strong>Fonio AI</strong>, <strong>Docsbot</strong>, and <strong>RAG Databases</strong> to analyze customer reviews, interpret sentiment, and provide intelligent support.</li>
       </ul>
     `,
     mediaType: "image",
-    mediaSrc: "./emobilio_automation.png"
-  },
-  "review-analysis": {
-    title: "AI Customer Review Analysis",
-    subtitle: "Working Student @ e-mobilio",
-    tags: ["Fonio.ai", "Docsbot", "AI Agents", "NLP"],
-    description: `
-      <h2>Project Overview</h2>
-      <p>Developed an intelligent application to analyze customer feedback and extract actionable business insights during my time at <strong>e-mobilio</strong>.</p>
-      
-      <h2>AI Agent Development</h2>
-      <p>I specialize in building and deploying customized AI Agents to process and interpret customer sentiment and support queries.</p>
-      <ul>
-        <li><strong>AI Tools:</strong> Extensively utilized <strong>Fonio.ai</strong> and <strong>Docsbot</strong> to develop conversational agents and analytical bots.</li>
-        <li><strong>Insight Generation:</strong> The system automatically categorizes reviews, identifies trends, and highlights areas for improvement.</li>
-      </ul>
-    `,
-    mediaType: "image",
-    mediaSrc: "./emobilio_review.png"
+    mediaSrc: "./emobilio_combined.png"
   },
   "churn-analyzer": {
     title: "Customer Churn Prediction",
