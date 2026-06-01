@@ -1,4 +1,4 @@
-import"./style-CAQyUPWV.js";const o={"medical-ai":{title:"Simultaneous Tracking & Segmentation",subtitle:"Bachelor Thesis: Carotid Plaque Analysis",tags:["Python","PyTorch","Deep Learning","Computer Vision","Medical Imaging"],description:`
+import"./style-CAQyUPWV.js";const a={"medical-ai":{title:"Simultaneous Tracking & Segmentation",subtitle:"Bachelor Thesis: Carotid Plaque Analysis",tags:["Python","PyTorch","Deep Learning","Computer Vision","Medical Imaging"],description:`
       <h2>Motivation & Objectives</h2>
       <p>Stroke is a leading cause of death worldwide. The state of the carotid plaque indicates the likelihood of a stroke. Ultrasound is a low-cost, noninvasive imaging method but suffers from noise and occlusion.</p>
       <p>My thesis focused on creating a network to <strong>segment and track carotid plaques</strong> in ultrasound sequences to aid diagnosis and maximize accuracy.</p>
@@ -54,15 +54,36 @@ import"./style-CAQyUPWV.js";const o={"medical-ai":{title:"Simultaneous Tracking 
         <li><strong>Tool Development:</strong> Developed a bespoke <strong>Java application</strong> for automated document evaluation, significantly reducing manual analysis time.</li>
         <li><strong>Maintenance:</strong> Managed and optimized locators within IntelliJ to ensure robust and clear test execution.</li>
       </ul>
-    `,mediaType:"image",mediaSrc:"./WWk_logo.png"},"kako-ai":{title:"Kako AI",subtitle:"Currently Running Project",tags:["AI","Machine Learning","Innovation"],description:`
+    `,mediaType:"image",mediaSrc:"./WWk_logo.png"},"kako-ai":{title:"KakoAI Industrial Copilot",subtitle:"Automated BOM Extraction & Procurement",tags:["Generative AI","DSPy","Multi-Agent Systems","Python","Automation"],description:`
       <h2>Project Overview</h2>
-      <p>An ongoing artificial intelligence initiative. Development is currently in progress.</p>
-    `,videoSrc:null},"llm-automation":{title:"LLM Business Automation",subtitle:"Currently Running Project",tags:["LLM","Python","Automation","Generative AI"],description:`
+      <p>KakoAI is an industrial copilot designed to automate critical workflows for a cable confection company. The system acts as a secure bridge between unstructured customer data (technical drawings/PDFs) and structured enterprise resources (ERP systems, procurement APIs).</p>
+      
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>BOM Extraction:</strong> Automatically extracts the Bill of Materials (BOM) from technical drawings and PDFs.</li>
+        <li><strong>Inventory & Procurement:</strong> Cross-references components with the internal Xentral ERP system and integrates with the Octopart API for real-time procurement of missing parts.</li>
+        <li><strong>Agentic Architecture:</strong> Built using DSPy and a multi-agent system to ensure reliable extraction, validation, and demand analysis.</li>
+      </ul>
+    `,mediaType:"image",mediaSrc:"./bom_table_edit_new.png"},"llm-automation":{title:"Business AI Automation",subtitle:"Working Student @ e-mobilio",tags:["n8n","Xano DB","HubSpot","Shopify","API Integration"],description:`
+      <h2>Role & Focus</h2>
+      <p>As a Working Student at <strong>e-mobilio</strong>, I specialize in streamlining complex business operations through advanced workflow automation and robust data architectures.</p>
+      
+      <h2>Key Integrations & Technologies</h2>
+      <ul>
+        <li><strong>Workflow Automation:</strong> Leveraging <strong>n8n</strong> to design and implement seamless data flows across enterprise platforms.</li>
+        <li><strong>Database Management:</strong> Utilizing <strong>Xano</strong> databases for scalable and efficient backend operations.</li>
+        <li><strong>API Integration:</strong> Developing extensive API integrations connecting core business tools like <strong>HubSpot</strong>, <strong>Shopify</strong>, and <strong>Microsoft Teams</strong> to unify operational communications.</li>
+      </ul>
+    `,videoSrc:null},"review-analysis":{title:"AI Customer Review Analysis",subtitle:"Working Student @ e-mobilio",tags:["Fonio.ai","Docsbot","AI Agents","NLP"],description:`
       <h2>Project Overview</h2>
-      <p>Leveraging Large Language Models to automate complex business processes and workflows. Currently under active development.</p>
-    `,videoSrc:null},"review-analysis":{title:"Customer Review Analysis App",subtitle:"Currently Running Project",tags:["NLP","Sentiment Analysis","Python","Data Science"],description:`
-      <h2>Project Overview</h2>
-      <p>A comprehensive application to analyze customer feedback and extract actionable insights using Natural Language Processing techniques.</p>
+      <p>Developed an intelligent application to analyze customer feedback and extract actionable business insights during my time at <strong>e-mobilio</strong>.</p>
+      
+      <h2>AI Agent Development</h2>
+      <p>I specialize in building and deploying customized AI Agents to process and interpret customer sentiment and support queries.</p>
+      <ul>
+        <li><strong>AI Tools:</strong> Extensively utilized <strong>Fonio.ai</strong> and <strong>Docsbot</strong> to develop conversational agents and analytical bots.</li>
+        <li><strong>Insight Generation:</strong> The system automatically categorizes reviews, identifies trends, and highlights areas for improvement.</li>
+      </ul>
     `,videoSrc:null},"churn-analyzer":{title:"Customer Churn Prediction",subtitle:"Telecommunications Data Analysis",tags:["Python","Scikit-Learn","Pandas","Random Forest"],description:`
       <h2>Project Overview</h2>
       <p>Targeting specific pain points in the telecommunications sector, I developed a machine learning model to predict customer churn. The goal was to identify at-risk customers early to enable proactive retention strategies.</p>
@@ -72,7 +93,7 @@ import"./style-CAQyUPWV.js";const o={"medical-ai":{title:"Simultaneous Tracking 
       
       <h2>Technical Implementation</h2>
       <p>Using <strong>Scikit-Learn</strong>, I trained and evaluated multiple models, including <strong>Logistic Regression</strong> and <strong>Random Forest Classifiers</strong>. The models were evaluated using balanced accuracy scores to handle class imbalance effectively.</p>
-    `,mediaType:"image",mediaSrc:"./churn_visual.png"}};document.addEventListener("DOMContentLoaded",()=>{const t=new URLSearchParams(window.location.search).get("id");if(!t||!o[t]){document.getElementById("p-title").textContent="Project Not Found",document.getElementById("p-subtitle").textContent="The project you are looking for does not exist.";return}const e=o[t];document.getElementById("p-title").innerHTML=e.title,document.getElementById("p-subtitle").textContent=e.subtitle;const a=document.getElementById("p-tags");a.innerHTML="",e.tags.forEach(s=>{const i=document.createElement("span");i.className="tag",i.textContent=s,a.appendChild(i)}),document.getElementById("p-content").innerHTML=e.description;const n=document.getElementById("media-container");e.mediaSrc?e.mediaType==="video"?n.innerHTML=`
+    `,mediaType:"image",mediaSrc:"./churn_visual.png"}};document.addEventListener("DOMContentLoaded",()=>{const t=new URLSearchParams(window.location.search).get("id");if(!t||!a[t]){document.getElementById("p-title").textContent="Project Not Found",document.getElementById("p-subtitle").textContent="The project you are looking for does not exist.";return}const e=a[t];document.getElementById("p-title").innerHTML=e.title,document.getElementById("p-subtitle").textContent=e.subtitle;const o=document.getElementById("p-tags");o.innerHTML="",e.tags.forEach(s=>{const i=document.createElement("span");i.className="tag",i.textContent=s,o.appendChild(i)}),document.getElementById("p-content").innerHTML=e.description;const n=document.getElementById("media-container");e.mediaSrc?e.mediaType==="video"?n.innerHTML=`
         <video src="${e.mediaSrc}" controls autoplay muted loop style="width:100%; height:100%; object-fit:contain;"></video>
       `:e.mediaType==="image"&&(n.innerHTML=`
         <img src="${e.mediaSrc}" alt="${e.title} Visual" style="width:100%; height:100%; object-fit:contain;">
