@@ -88,32 +88,54 @@ export const projectData = {
     mediaSrc: "./WWk_logo.png"
   },
   "kako-ai": {
-    title: "Kako AI",
-    subtitle: "Currently Running Project",
-    tags: ["AI", "Machine Learning", "Innovation"],
+    title: "KakoAI Industrial Copilot",
+    subtitle: "Automated BOM Extraction & Procurement",
+    tags: ["Generative AI", "DSPy", "Multi-Agent Systems", "Python", "Automation"],
     description: `
       <h2>Project Overview</h2>
-      <p>An ongoing artificial intelligence initiative. Development is currently in progress.</p>
+      <p>KakoAI is an industrial copilot designed to automate critical workflows for a cable confection company. The system acts as a secure bridge between unstructured customer data (technical drawings/PDFs) and structured enterprise resources (ERP systems, procurement APIs).</p>
+      
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>BOM Extraction:</strong> Automatically extracts the Bill of Materials (BOM) from technical drawings and PDFs.</li>
+        <li><strong>Inventory & Procurement:</strong> Cross-references components with the internal Xentral ERP system and integrates with the Octopart API for real-time procurement of missing parts.</li>
+        <li><strong>Agentic Architecture:</strong> Built using DSPy and a multi-agent system to ensure reliable extraction, validation, and demand analysis.</li>
+      </ul>
     `,
-    videoSrc: null
+    mediaType: "image",
+    mediaSrc: "./bom_table_edit_new.png"
   },
   "llm-automation": {
-    title: "LLM Business Automation",
-    subtitle: "Currently Running Project",
-    tags: ["LLM", "Python", "Automation", "Generative AI"],
+    title: "Business AI Automation",
+    subtitle: "Working Student @ e-mobilio",
+    tags: ["n8n", "Xano DB", "HubSpot", "Shopify", "API Integration"],
     description: `
-      <h2>Project Overview</h2>
-      <p>Leveraging Large Language Models to automate complex business processes and workflows. Currently under active development.</p>
+      <h2>Role & Focus</h2>
+      <p>As a Working Student at <strong>e-mobilio</strong>, I specialize in streamlining complex business operations through advanced workflow automation and robust data architectures.</p>
+      
+      <h2>Key Integrations & Technologies</h2>
+      <ul>
+        <li><strong>Workflow Automation:</strong> Leveraging <strong>n8n</strong> to design and implement seamless data flows across enterprise platforms.</li>
+        <li><strong>Database Management:</strong> Utilizing <strong>Xano</strong> databases for scalable and efficient backend operations.</li>
+        <li><strong>API Integration:</strong> Developing extensive API integrations connecting core business tools like <strong>HubSpot</strong>, <strong>Shopify</strong>, and <strong>Microsoft Teams</strong> to unify operational communications.</li>
+      </ul>
     `,
     videoSrc: null
   },
   "review-analysis": {
-    title: "Customer Review Analysis App",
-    subtitle: "Currently Running Project",
-    tags: ["NLP", "Sentiment Analysis", "Python", "Data Science"],
+    title: "AI Customer Review Analysis",
+    subtitle: "Working Student @ e-mobilio",
+    tags: ["Fonio.ai", "Docsbot", "AI Agents", "NLP"],
     description: `
       <h2>Project Overview</h2>
-      <p>A comprehensive application to analyze customer feedback and extract actionable insights using Natural Language Processing techniques.</p>
+      <p>Developed an intelligent application to analyze customer feedback and extract actionable business insights during my time at <strong>e-mobilio</strong>.</p>
+      
+      <h2>AI Agent Development</h2>
+      <p>I specialize in building and deploying customized AI Agents to process and interpret customer sentiment and support queries.</p>
+      <ul>
+        <li><strong>AI Tools:</strong> Extensively utilized <strong>Fonio.ai</strong> and <strong>Docsbot</strong> to develop conversational agents and analytical bots.</li>
+        <li><strong>Insight Generation:</strong> The system automatically categorizes reviews, identifies trends, and highlights areas for improvement.</li>
+      </ul>
     `,
     videoSrc: null
   },
