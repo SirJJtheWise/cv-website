@@ -47,18 +47,41 @@ projectCards.forEach(card => {
   }
 });
 
-// 3. Simple Hero Animation (Parallax or Fade-in)
-// Fade in elements on load
-document.addEventListener('DOMContentLoaded', () => {
-  const heroContent = document.querySelector('.hero-content');
-  heroContent.style.opacity = '0';
-  heroContent.style.transform = 'translateY(20px)';
-  heroContent.style.transition = 'opacity 1s ease, transform 1s ease';
+// 3. Scroll Reveal Animations
+// Select elements to animate
+const revealElements = document.querySelectorAll('.project-card, .timeline-item, .skill-item, h2:not(.gradient-text)');
 
-  setTimeout(() => {
-    heroContent.style.opacity = '1';
-    heroContent.style.transform = 'translateY(0)';
-  }, 100);
+const revealObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target); // Only animate once
+    }
+  });
+}, {
+  root: null,
+  threshold: 0.15, // Trigger when 15% visible
+  rootMargin: "0px"
 });
 
-console.log('CV Website Loaded - Ready for assets!');
+revealElements.forEach(el => {
+  el.classList.add('reveal');
+  revealObserver.observe(el);
+});
+
+// Hero Animation (keeping existing but ensuring it doesn't conflict)
+document.addEventListener('DOMContentLoaded', () => {
+  const heroContent = document.querySelector('.hero-content');
+  if (heroContent) {
+    heroContent.style.opacity = '0';
+    heroContent.style.transform = 'translateY(20px)';
+    heroContent.style.transition = 'opacity 1s ease, transform 1s ease';
+
+    setTimeout(() => {
+      heroContent.style.opacity = '1';
+      heroContent.style.transform = 'translateY(0)';
+    }, 100);
+  }
+});
+
+console.log('CV Website Loaded - Animations Initialized!');
