@@ -122,7 +122,7 @@ export const projectData = {
       </ul>
     `,
     mediaType: "image",
-    mediaSrc: "./emobilio_combined.png"
+    mediaSrc: "./emobilio_n8n.png"
   },
   "churn-analyzer": {
     title: "Customer Churn Prediction",
