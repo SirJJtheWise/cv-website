@@ -75,7 +75,7 @@ import"./style-CTz7fj_L.js";const a={"medical-ai":{title:"Simultaneous Tracking 
         <li><strong>Frontend & Integrations:</strong> Developed front-end UIs with <strong>Bubble.io</strong> and integrated core tools like <strong>Shopify</strong>, <strong>Sendgrid</strong>, and <strong>Microsoft Teams</strong> for automated communications and commerce.</li>
         <li><strong>AI Agent Development:</strong> Built and deployed custom AI Agents using <strong>Fonio AI</strong>, <strong>Docsbot</strong>, and <strong>RAG Databases</strong> to analyze customer reviews, interpret sentiment, and provide intelligent support.</li>
       </ul>
-    `,mediaType:"image",mediaSrc:"./emobilio_combined.png"},"churn-analyzer":{title:"Customer Churn Prediction",subtitle:"Telecommunications Data Analysis",tags:["Python","Scikit-Learn","Pandas","Random Forest"],description:`
+    `,mediaType:"image",mediaSrc:"./emobilio_n8n.png"},"churn-analyzer":{title:"Customer Churn Prediction",subtitle:"Telecommunications Data Analysis",tags:["Python","Scikit-Learn","Pandas","Random Forest"],description:`
       <h2>Project Overview</h2>
       <p>Targeting specific pain points in the telecommunications sector, I developed a machine learning model to predict customer churn. The goal was to identify at-risk customers early to enable proactive retention strategies.</p>
       
