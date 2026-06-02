@@ -106,4 +106,21 @@ if (timelineSection && timelineProgress) {
   });
 }
 
+// 5. Global Scroll Flow
+const globalProgress = document.getElementById('global-scroll-progress');
+
+if (globalProgress) {
+  window.addEventListener('scroll', () => {
+    // Total height of the document minus the viewport height
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollY = window.scrollY;
+    
+    if (scrollHeight > 0) {
+      let progress = (scrollY / scrollHeight) * 100;
+      progress = Math.max(0, Math.min(progress, 100)); // Clamp between 0 and 100
+      globalProgress.style.height = `${progress}%`;
+    }
+  });
+}
+
 console.log('CV Website Loaded - Animations Initialized!');

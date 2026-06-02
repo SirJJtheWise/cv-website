@@ -445,6 +445,27 @@ nav a.active {
   left: 50%;
 }
 
+/* Global Scroll Flow */
+.global-scroll-track {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.03);
+  z-index: 9999;
+}
+
+.global-scroll-progress {
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
+  box-shadow: 0 0 15px var(--primary-glow);
+  transition: height 0.1s ease-out;
+}
+
+/* Typography */
+
 /* dots */
 .timeline-item::after {
   content: '';
