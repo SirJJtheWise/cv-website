@@ -84,4 +84,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// 4. Timeline Progress Bar
+const timelineSection = document.getElementById('timeline');
+const timelineProgress = document.getElementById('timeline-progress');
+
+if (timelineSection && timelineProgress) {
+  window.addEventListener('scroll', () => {
+    const sectionTop = timelineSection.offsetTop;
+    const sectionHeight = timelineSection.clientHeight;
+    
+    // We want the line to start drawing when the middle of the screen hits the top of the timeline
+    const scrollPosition = window.scrollY + (window.innerHeight / 2);
+    
+    if (scrollPosition >= sectionTop) {
+      let progress = ((scrollPosition - sectionTop) / (sectionHeight - window.innerHeight / 2)) * 100;
+      progress = Math.max(0, Math.min(progress, 100)); // Clamp between 0 and 100
+      timelineProgress.style.height = `${progress}%`;
+    } else {
+      timelineProgress.style.height = '0%';
+    }
+  });
+}
+
 console.log('CV Website Loaded - Animations Initialized!');

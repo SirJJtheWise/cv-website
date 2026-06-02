@@ -403,6 +403,19 @@ nav a.active {
   border-radius: 2px;
 }
 
+.timeline-progress {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 0%;
+  margin-left: -2px;
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
+  box-shadow: 0 0 15px var(--primary-glow);
+  z-index: 0;
+  border-radius: 2px;
+}
+
 .timeline-item {
   padding: 10px 40px;
   position: relative;
@@ -441,7 +454,8 @@ nav a.active {
 .timeline-item:hover::after {
   background-color: var(--secondary);
   border-color: var(--secondary);
-  box-shadow: 0 0 10px var(--secondary);
+  box-shadow: 0 0 20px var(--primary-glow);
+  transform: scale(1.3);
 }
 
 .timeline-content {
@@ -455,8 +469,8 @@ nav a.active {
 
 .timeline-content:hover {
   border-color: var(--primary);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px var(--primary-glow);
 }
 
 .timeline-date {
@@ -486,6 +500,10 @@ nav a.active {
 /* Mobile responsive timeline */
 @media screen and (max-width: 768px) {
   .timeline-container::after {
+    left: 31px;
+  }
+
+  .timeline-progress {
     left: 31px;
   }
 
@@ -525,10 +543,18 @@ nav a.active {
 .reveal {
   opacity: 0;
   transform: translateY(50px);
-  transition: all 0.8s ease-out;
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.timeline-item.left.reveal {
+  transform: translateX(-50px);
+}
+
+.timeline-item.right.reveal {
+  transform: translateX(50px);
 }
 
 .reveal.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) translateX(0);
 }
