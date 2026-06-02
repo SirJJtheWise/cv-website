@@ -1,0 +1,112 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{resume} % Use the custom resume.cls style 
+
+\usepackage[left=0.4 in,top=0.3 in,right=0.4 in,bottom=0.3in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Jason Mann} % Your name 
+\address{Munich, Germany} % Your address 
+\address{4jasonmann@gmail.com} % Your phone number and email
+
+\begin{document}  
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf Master of Science in Informatics} \hfill {Present}
+\\ 
+Technical University of Munich (TUM), Germany 
+\\
+Specializing in AI, High Performance Computing, and Web Development
+
+{\bf Bachelor of Science} \hfill {}
+\\ 
+Technical University of Munich (TUM), Germany
+\\
+Thesis: Simultaneous Tracking \& Segmentation (Carotid Plaque Analysis)
+
+\end{rSection} 
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Skills and Interests}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }  
+Programming & Python, Java, C/C++, C\#, SQL, Dart \\
+Web \& Cloud & Flutter, Django, Spring Boot, Vue.js, Playwright, Azure, PostgreSQL \\
+AI \& Data Science & Generative AI, LLMs, AI Agents, RAG, PyTorch, OpenCV, Scikit-Learn, Pandas, Numpy, DSPy \\
+Workflow \& AI tools & n8n, Xano, Sendgrid, Bubble.io, Fonio AI, Docsbot \\
+\end{tabular}   
+
+\end{rSection}
+
+%-------------------------------------------------------------------------------
+%	EXPERIENCE
+%-------------------------------------------------------------------------------
+\begin{rSection}{Experience}
+
+\begin{rSubsection}{e-mobilio}{Current}{Working Student - Fullstack AI \& Business Automation}{}
+\item Utilized n8n as the central orchestration hub to seamlessly connect and manage microservices.
+\item Built scalable backend operations using Xano and deployed infrastructure on Azure.
+\item Developed custom AI Agents using Fonio AI, Docsbot, and RAG Databases for customer review analysis.
+\item Integrated core tools like Shopify, Sendgrid, and Microsoft Teams for automated communications.
+\end{rSubsection}
+
+\begin{rSubsection}{WWK Insurance}{June 2023 - May 2024}{Working Student - Test Automation Framework}{}
+\item Supported the migration and introduction of Playwright for modern web testing in a Java/Spring ecosystem.
+\item Developed a bespoke Java application for automated document evaluation.
+\end{rSubsection}
+
+\begin{rSubsection}{Leibniz Supercomputing Centre (LRZ)}{}{BEAST Lab - HPC Performance Engineering}{}
+\item Benchmarked and optimized single-node performance on next-generation architectures (Intel Icelake, AMD Rome, Marvell ThunderX2, Fujitsu A64FX).
+\item Code tuning using OpenMP, MPI, AVX512, and ARM SVE.
+\end{rSubsection}
+
+\end{rSection} 
+
+%-------------------------------------------------------------------------------
+%	PROJECTS
+%-------------------------------------------------------------------------------
+\begin{rSection}{Projects}
+
+\begin{rSubsection}{KakoAI Industrial Copilot}{}{Automated BOM Extraction \& Procurement}{}
+\item Developed an industrial copilot to automate critical workflows for a cable confection company.
+\item Automatically extracts Bill of Materials from technical drawings/PDFs using Generative AI.
+\item Built using DSPy and a multi-agent system to integrate with internal ERPs and Octopart API.
+\end{rSubsection}
+
+\begin{rSubsection}{Gamified OpenStreetMap Tracker}{}{Hackatum Project - Full-Stack Mobile App}{}
+\item Developed a full-stack mobile application (Flutter, Django) that gamifies OSM data improvement.
+\item Integrated Azure Custom Vision for AI-powered verification of user-submitted road condition images.
+\end{rSubsection}
+
+\begin{rSubsection}{Simultaneous Tracking \& Segmentation}{}{Bachelor Thesis}{}
+\item Designed a hybrid neural network architecture (PyTorch) to segment and track carotid plaques in ultrasound sequences.
+\item Achieved state-of-the-art performance on par with DeepLab3+ with superior temporal consistency.
+\end{rSubsection}
+
+\end{rSection}
+
+\end{document}
