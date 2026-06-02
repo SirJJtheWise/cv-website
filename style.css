@@ -276,7 +276,29 @@ nav a.active {
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
-  opacity: 0.6;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.scroll-link {
+  text-decoration: none;
+  color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scroll-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.9;
+}
+
+.scroll-arrow {
+  font-size: 1.5rem;
 }
 
 @keyframes bounce {
