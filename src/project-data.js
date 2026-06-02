@@ -127,16 +127,16 @@ export const projectData = {
   "churn-analyzer": {
     title: "Customer Churn Prediction",
     subtitle: "Telecommunications Data Analysis",
-    tags: ["Python", "Scikit-Learn", "Pandas", "Random Forest"],
+    tags: ["Python", "XGBoost", "Random Forest", "Scikit-Learn", "Pandas"],
     description: `
       <h2>Project Overview</h2>
       <p>Targeting specific pain points in the telecommunications sector, I developed a machine learning model to predict customer churn. The goal was to identify at-risk customers early to enable proactive retention strategies.</p>
       
       <h2>Methodology</h2>
-      <p>The solution involved cleaning and preprocessing a dataset of customer profiles (demographics, services, payment info). I implemented <strong>One-Hot Encoding</strong> for categorical variables and utilized ensemble methods for prediction.</p>
+      <p>The solution involved rigorously cleaning and preprocessing a dataset of customer profiles (demographics, services, payment info). I engineered robust features and applied advanced data transformations to prepare the data for predictive modeling.</p>
       
       <h2>Technical Implementation</h2>
-      <p>Using <strong>Scikit-Learn</strong>, I trained and evaluated multiple models, including <strong>Logistic Regression</strong> and <strong>Random Forest Classifiers</strong>. The models were evaluated using balanced accuracy scores to handle class imbalance effectively.</p>
+      <p>Using <strong>Scikit-Learn</strong> and <strong>XGBoost</strong>, I trained and evaluated high-performance ensemble models, specifically <strong>XGBoost Classifiers</strong> and <strong>Random Forests</strong>. The models were evaluated using balanced accuracy scores to handle class imbalance effectively.</p>
     `,
     mediaType: "image",
     mediaSrc: "./churn_visual.png"
