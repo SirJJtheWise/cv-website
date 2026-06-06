@@ -358,6 +358,7 @@ nav a.active {
   flex-direction: column;
   gap: 2rem;
   align-items: flex-end;
+  grid-column: 3; /* Force to the right column since the center is absolutely positioned */
 }
 
 .hero-card {
