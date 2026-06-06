@@ -120,19 +120,27 @@ revealElements.forEach(el => {
   revealObserver.observe(el);
 });
 
-// Hero Animation (keeping existing but ensuring it doesn't conflict)
+// Hero Animation
 document.addEventListener('DOMContentLoaded', () => {
-  const heroContent = document.querySelector('.hero-content');
-  if (heroContent) {
-    heroContent.style.opacity = '0';
-    heroContent.style.transform = 'translateY(20px)';
-    heroContent.style.transition = 'opacity 1s ease, transform 1s ease';
+  const heroLeft = document.querySelector('.hero-left');
+  const heroCenter = document.querySelector('.hero-center');
+  const heroRight = document.querySelector('.hero-right');
 
-    setTimeout(() => {
-      heroContent.style.opacity = '1';
-      heroContent.style.transform = 'translateY(0)';
-    }, 100);
-  }
+  const animateIn = (el, delay) => {
+    if (el) {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 1s ease, transform 1s ease';
+      setTimeout(() => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }, delay);
+    }
+  };
+
+  animateIn(heroCenter, 100);
+  animateIn(heroLeft, 300);
+  animateIn(heroRight, 500);
 });
 
 // 4. Timeline Progress Bar
