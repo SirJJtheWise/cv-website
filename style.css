@@ -719,21 +719,42 @@ nav a.active {
   margin-bottom: 0;
 }
 
-.preloader-bar-container {
-  width: 200px;
-  height: 4px;
-  background: hsla(var(--hue), 20%, 95%, 0.1);
-  border-radius: 2px;
-  overflow: hidden;
-  position: relative;
+.preloader-edge {
+  position: absolute;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  box-shadow: 0 0 15px var(--primary-glow);
+  transition: all 0.1s linear;
 }
 
-.preloader-bar {
+.preloader-top {
+  top: 0;
+  left: 0;
+  height: 6px;
   width: 0%;
-  height: 100%;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  box-shadow: 0 0 10px var(--primary-glow);
-  transition: width 0.1s ease;
+}
+
+.preloader-right {
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 0%;
+  background: linear-gradient(180deg, var(--secondary), var(--primary));
+}
+
+.preloader-bottom {
+  bottom: 0;
+  right: 0;
+  height: 6px;
+  width: 0%;
+  background: linear-gradient(270deg, var(--primary), var(--secondary));
+}
+
+.preloader-left {
+  bottom: 0;
+  left: 0;
+  width: 6px;
+  height: 0%;
+  background: linear-gradient(0deg, var(--secondary), var(--primary));
 }
 
 @keyframes pulse {

@@ -3,25 +3,52 @@
 // 0. Preloader Logic
 document.addEventListener('DOMContentLoaded', () => {
   const preloader = document.getElementById('preloader');
-  const preloaderBar = document.getElementById('preloader-bar');
+  const plTop = document.getElementById('pl-top');
+  const plRight = document.getElementById('pl-right');
+  const plBottom = document.getElementById('pl-bottom');
+  const plLeft = document.getElementById('pl-left');
   let progress = 0;
   
-  // Simulate loading progress
+  // Simulate loading progress (loop around screen)
   const interval = setInterval(() => {
-    progress += Math.random() * 15; // Random increment
+    progress += Math.random() * 8 + 2; // steady increment
     if (progress >= 100) {
       progress = 100;
       clearInterval(interval);
-      if (preloaderBar) preloaderBar.style.width = `${progress}%`;
+      if (plTop) plTop.style.width = '100%';
+      if (plRight) plRight.style.height = '100%';
+      if (plBottom) plBottom.style.width = '100%';
+      if (plLeft) plLeft.style.height = '100%';
       
-      // Hide preloader after a short delay
+      // Hide preloader after looping is complete
       setTimeout(() => {
         if (preloader) preloader.classList.add('hidden');
-      }, 400);
+      }, 500);
     } else {
-      if (preloaderBar) preloaderBar.style.width = `${progress}%`;
+      // 0-25%: Top
+      if (progress <= 25) {
+        if (plTop) plTop.style.width = `${progress * 4}%`;
+      } 
+      // 25-50%: Right
+      else if (progress <= 50) {
+        if (plTop) plTop.style.width = '100%';
+        if (plRight) plRight.style.height = `${(progress - 25) * 4}%`;
+      } 
+      // 50-75%: Bottom
+      else if (progress <= 75) {
+        if (plTop) plTop.style.width = '100%';
+        if (plRight) plRight.style.height = '100%';
+        if (plBottom) plBottom.style.width = `${(progress - 50) * 4}%`;
+      } 
+      // 75-100%: Left
+      else {
+        if (plTop) plTop.style.width = '100%';
+        if (plRight) plRight.style.height = '100%';
+        if (plBottom) plBottom.style.width = '100%';
+        if (plLeft) plLeft.style.height = `${(progress - 75) * 4}%`;
+      }
     }
-  }, 100);
+  }, 70);
 });
 
 // 1. Navigation Active State & Smooth Scroll handling

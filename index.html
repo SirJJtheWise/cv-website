@@ -28,13 +28,18 @@
 <body>
   <!-- Preloader -->
   <div id="preloader" class="preloader">
+    <div class="preloader-edge preloader-top" id="pl-top"></div>
+    <div class="preloader-edge preloader-right" id="pl-right"></div>
+    <div class="preloader-edge preloader-bottom" id="pl-bottom"></div>
+    <div class="preloader-edge preloader-left" id="pl-left"></div>
+    
     <div class="preloader-content">
       <div class="preloader-logo-container">
-        <svg class="fullstack-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary);">
+        <svg class="fullstack-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <defs>
             <linearGradient id="preloader-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color: var(--primary);" />
-              <stop offset="100%" style="stop-color: var(--secondary);" />
+              <stop offset="0%" stop-color="#9b66ff" />
+              <stop offset="100%" stop-color="#66e0ff" />
             </linearGradient>
           </defs>
           <path stroke="url(#preloader-grad)" d="M12 2L2 7l10 5 10-5-10-5z"></path>
@@ -42,9 +47,6 @@
           <path stroke="url(#preloader-grad)" d="M2 17l10 5 10-5"></path>
         </svg>
         <h1 class="gradient-text preloader-logo">JM</h1>
-      </div>
-      <div class="preloader-bar-container">
-        <div class="preloader-bar" id="preloader-bar"></div>
       </div>
     </div>
   </div>
