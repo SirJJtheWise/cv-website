@@ -431,13 +431,16 @@ nav a.active {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: transform 0.15s ease-out, background 0.3s, border-color 0.3s, box-shadow 0.3s;
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+  animation: bubbleFloat var(--float-duration, 6s) ease-in-out var(--float-delay, 0s) infinite alternate;
   will-change: transform;
-  cursor: grab;
 }
 
-.skill-item:active {
-  cursor: grabbing;
+@keyframes bubbleFloat {
+  0% { transform: translate(var(--x1, -3px), var(--y1, 4px)); }
+  33% { transform: translate(var(--x2, 4px), var(--y2, -2px)); }
+  66% { transform: translate(var(--x3, -2px), var(--y3, -5px)); }
+  100% { transform: translate(var(--x1, -3px), var(--y1, 4px)); }
 }
 
 .skill-item i {

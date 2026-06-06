@@ -174,33 +174,24 @@ if (globalProgress) {
   });
 }
 
-// 6. Magnetic Skills Hover
+// 6. Dynamic Bubble Floating Skills
 const skillItems = document.querySelectorAll('.skill-item');
 
 skillItems.forEach(item => {
-  item.addEventListener('mousemove', (e) => {
-    const rect = item.getBoundingClientRect();
-    const x = e.clientX - rect.left; // x position within the element
-    const y = e.clientY - rect.top;  // y position within the element
-
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const deltaX = x - centerX;
-    const deltaY = y - centerY;
-
-    // Calculate pull strength (multiplier determines how strong the magnet is)
-    const pullX = deltaX * 0.4;
-    const pullY = deltaY * 0.4;
-
-    // Apply translation and slight scale
-    item.style.transform = `translate(${pullX}px, ${pullY}px) scale(1.05)`;
-  });
-
-  item.addEventListener('mouseleave', () => {
-    // Reset position with smooth spring-like CSS transition
-    item.style.transform = `translate(0px, 0px) scale(1)`;
-  });
+  // Generate random movement offsets
+  const random = (min, max) => Math.random() * (max - min) + min;
+  
+  item.style.setProperty('--x1', `${random(-6, 6)}px`);
+  item.style.setProperty('--y1', `${random(-6, 6)}px`);
+  item.style.setProperty('--x2', `${random(-6, 6)}px`);
+  item.style.setProperty('--y2', `${random(-6, 6)}px`);
+  item.style.setProperty('--x3', `${random(-6, 6)}px`);
+  item.style.setProperty('--y3', `${random(-6, 6)}px`);
+  
+  // Random duration between 4s and 8s
+  item.style.setProperty('--float-duration', `${random(4, 8)}s`);
+  // Random delay to desync the animations
+  item.style.setProperty('--float-delay', `-${random(0, 5)}s`);
 });
 
 console.log('CV Website Loaded - Animations Initialized!');
