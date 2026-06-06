@@ -431,7 +431,13 @@ nav a.active {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: var(--transition);
+  transition: transform 0.15s ease-out, background 0.3s, border-color 0.3s, box-shadow 0.3s;
+  will-change: transform;
+  cursor: grab;
+}
+
+.skill-item:active {
+  cursor: grabbing;
 }
 
 .skill-item i {

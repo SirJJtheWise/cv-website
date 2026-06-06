@@ -174,4 +174,33 @@ if (globalProgress) {
   });
 }
 
+// 6. Magnetic Skills Hover
+const skillItems = document.querySelectorAll('.skill-item');
+
+skillItems.forEach(item => {
+  item.addEventListener('mousemove', (e) => {
+    const rect = item.getBoundingClientRect();
+    const x = e.clientX - rect.left; // x position within the element
+    const y = e.clientY - rect.top;  // y position within the element
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const deltaX = x - centerX;
+    const deltaY = y - centerY;
+
+    // Calculate pull strength (multiplier determines how strong the magnet is)
+    const pullX = deltaX * 0.4;
+    const pullY = deltaY * 0.4;
+
+    // Apply translation and slight scale
+    item.style.transform = `translate(${pullX}px, ${pullY}px) scale(1.05)`;
+  });
+
+  item.addEventListener('mouseleave', () => {
+    // Reset position with smooth spring-like CSS transition
+    item.style.transform = `translate(0px, 0px) scale(1)`;
+  });
+});
+
 console.log('CV Website Loaded - Animations Initialized!');
