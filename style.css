@@ -706,10 +706,16 @@ nav a.active {
   gap: 1.5rem;
 }
 
+.preloader-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: pulse 1.5s infinite alternate;
+}
+
 .preloader-logo {
   font-size: 4rem;
   letter-spacing: 2px;
-  animation: pulse 1.5s infinite alternate;
   margin-bottom: 0;
 }
 
