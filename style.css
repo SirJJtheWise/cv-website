@@ -328,25 +328,27 @@ nav a.active {
   color: var(--bg-dark);
 }
 
-/* Center Column */
+/* Center Column (Now acts as a massive background overlay) */
 .hero-center {
-  z-index: 2;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   display: flex;
   justify-content: center;
-  align-items: center; /* Center vertically instead of flex-end */
-  height: 100%;
+  align-items: center;
+  pointer-events: none; /* Allows clicking elements on top */
 }
 
 .hero-subject {
   width: 100%;
-  max-width: 550px; /* Made much larger */
-  aspect-ratio: 1/1;
+  height: 100%;
+  max-width: none;
+  aspect-ratio: auto;
   object-fit: cover;
-  /* Merge with background using radial fade mask */
-  mask-image: radial-gradient(circle at center, black 50%, transparent 75%);
-  -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 75%);
-  /* Soft glow behind it */
-  filter: drop-shadow(0 0 30px var(--primary-glow));
+  /* Massive radial fade mask to blend the edges of the screen into the dark theme */
+  mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
+  opacity: 0.7; /* Slightly faded so typography stands out */
 }
 
 /* Right Column */
