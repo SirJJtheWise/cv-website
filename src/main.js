@@ -1,5 +1,29 @@
 // Main entry point logic
 
+// 0. Preloader Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const preloader = document.getElementById('preloader');
+  const preloaderBar = document.getElementById('preloader-bar');
+  let progress = 0;
+  
+  // Simulate loading progress
+  const interval = setInterval(() => {
+    progress += Math.random() * 15; // Random increment
+    if (progress >= 100) {
+      progress = 100;
+      clearInterval(interval);
+      if (preloaderBar) preloaderBar.style.width = `${progress}%`;
+      
+      // Hide preloader after a short delay
+      setTimeout(() => {
+        if (preloader) preloader.classList.add('hidden');
+      }, 400);
+    } else {
+      if (preloaderBar) preloaderBar.style.width = `${progress}%`;
+    }
+  }, 100);
+});
+
 // 1. Navigation Active State & Smooth Scroll handling
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('nav a');

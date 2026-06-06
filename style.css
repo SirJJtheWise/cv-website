@@ -679,3 +679,58 @@ nav a.active {
   opacity: 1;
   transform: translateY(0) translateX(0);
 }
+
+/*****************
+ *  PRELOADER
+ *****************/
+.preloader {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-dark);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.preloader-logo {
+  font-size: 4rem;
+  letter-spacing: 2px;
+  animation: pulse 1.5s infinite alternate;
+  margin-bottom: 0;
+}
+
+.preloader-bar-container {
+  width: 200px;
+  height: 4px;
+  background: hsla(var(--hue), 20%, 95%, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.preloader-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  box-shadow: 0 0 10px var(--primary-glow);
+  transition: width 0.1s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  100% { transform: scale(1.05); opacity: 1; }
+}
