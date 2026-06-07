@@ -345,10 +345,10 @@ nav a.active {
   max-width: none;
   aspect-ratio: auto;
   object-fit: cover;
-  /* Massive radial fade mask to blend the edges of the screen into the dark theme */
-  mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
-  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
-  opacity: 0.7; /* Slightly faded so typography stands out */
+  /* Reduced the fade so the image remains mostly sharp and vivid */
+  mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+  opacity: 1; /* Restored full opacity for maximum crispness */
 }
 
 /* Right Column */
