@@ -812,7 +812,9 @@ nav a.active {
   transform: translateX(50px);
 }
 
-.reveal.active {
+.reveal.active,
+.timeline-item.left.reveal.active,
+.timeline-item.right.reveal.active {
   opacity: 1;
   transform: translateY(0) translateX(0);
 }
