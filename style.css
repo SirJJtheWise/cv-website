@@ -910,6 +910,12 @@ nav a.active {
     height: 48px;
   }
   
+  /* Prevent horizontal overflow globally on mobile */
+  body {
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  
   /* Hero Stacking and Padding */
   .hero-name {
     font-size: 2.5rem;
@@ -922,14 +928,31 @@ nav a.active {
   .hero-socials {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0.5rem;
+  }
+  .email-pill {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
   }
   .hero-right {
     grid-column: 1;
     align-items: center;
+    width: 100%; /* prevent flex blowout */
+  }
+  .hero-card {
+    width: 100%;
+    max-width: 300px; /* constrain cards */
   }
   #hero.hero-mockup {
     padding-top: 6rem;
     gap: 2rem;
+    min-height: auto; /* Allow natural stacking without forcing 100vh if it's taller */
+    padding-bottom: 6rem; /* space for scroll indicator */
+  }
+  
+  /* Project grid fix to prevent horizontal scrolling */
+  .grid-layout {
+    grid-template-columns: 1fr;
   }
   
   /* Timeline fixes (Dot alignment & spacing) */
