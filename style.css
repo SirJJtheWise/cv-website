@@ -328,27 +328,26 @@ nav a.active {
   color: var(--bg-dark);
 }
 
-/* Center Column (Now acts as a massive background overlay) */
+/* Center Column */
 .hero-center {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
-  pointer-events: none; /* Allows clicking elements on top */
+  height: 100%;
 }
 
 .hero-subject {
   width: 100%;
-  height: 100%;
-  max-width: none;
-  aspect-ratio: auto;
+  max-width: 450px;
+  aspect-ratio: 1/1;
   object-fit: cover;
-  /* Reduced the fade so the image remains mostly sharp and vivid */
-  mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
-  -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
-  opacity: 1; /* Restored full opacity for maximum crispness */
+  border-radius: 50%;
+  border: 2px solid var(--glass-border);
+  mask-image: radial-gradient(circle at center, black 60%, transparent 75%);
+  -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 75%);
+  opacity: 1;
+  filter: drop-shadow(0 0 30px var(--primary-glow));
 }
 
 /* Right Column */
@@ -358,7 +357,7 @@ nav a.active {
   flex-direction: column;
   gap: 2rem;
   align-items: flex-end;
-  grid-column: 3; /* Force to the right column since the center is absolutely positioned */
+  /* padding-right: 2vw; is no longer strictly necessary, but we can keep it or let grid handle it */
 }
 
 .hero-card {
