@@ -354,8 +354,10 @@ nav a.active {
 
 .hero-subject {
   width: 100%;
-  max-width: 550px; /* Large cutout */
+  max-width: 600px; /* Large cutout */
+  max-height: 85vh; /* Keep it nicely within the viewport */
   object-fit: contain;
+  object-position: bottom center; /* Anchor the image to the bottom */
   border: none;
   border-radius: 0;
   mask-image: none;
@@ -363,7 +365,7 @@ nav a.active {
   filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
   position: relative;
   z-index: 1;
-  transform: translateY(10%); /* Push down slightly so they anchor visually */
+  transform: translateY(0); /* Removed translateY so it sits perfectly on flex-end */
 }
 
 /* Right Column */
