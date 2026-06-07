@@ -333,21 +333,37 @@ nav a.active {
   z-index: 2;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end; /* Align the person to the bottom of the container */
   height: 100%;
+  position: relative;
+}
+
+.hero-center::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, hsla(var(--hue), 60%, 40%, 0.15) 0%, transparent 70%);
+  z-index: 0;
+  animation: pulse 4s infinite alternate ease-in-out;
 }
 
 .hero-subject {
   width: 100%;
-  max-width: 450px;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid var(--glass-border);
-  mask-image: radial-gradient(circle at center, black 60%, transparent 75%);
-  -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 75%);
-  opacity: 1;
-  filter: drop-shadow(0 0 30px var(--primary-glow));
+  max-width: 550px; /* Large cutout */
+  object-fit: contain;
+  border: none;
+  border-radius: 0;
+  mask-image: none;
+  -webkit-mask-image: none;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+  position: relative;
+  z-index: 1;
+  transform: translateY(10%); /* Push down slightly so they anchor visually */
 }
 
 /* Right Column */
