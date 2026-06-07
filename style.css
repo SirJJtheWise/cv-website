@@ -333,39 +333,28 @@ nav a.active {
   z-index: 2;
   display: flex;
   justify-content: center;
-  align-items: flex-end; /* Align the person to the bottom of the container */
+  align-items: center; /* Center vertically */
   height: 100%;
   position: relative;
 }
 
 .hero-center::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, hsla(var(--hue), 60%, 40%, 0.15) 0%, transparent 70%);
-  z-index: 0;
-  animation: pulse 4s infinite alternate ease-in-out;
+  display: none;
 }
 
 .hero-subject {
   width: 100%;
-  max-width: 600px; /* Large cutout */
-  max-height: 85vh; /* Keep it nicely within the viewport */
-  object-fit: contain;
-  object-position: bottom center; /* Anchor the image to the bottom */
-  border: none;
-  border-radius: 0;
-  mask-image: none;
-  -webkit-mask-image: none;
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+  max-width: 450px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid hsla(var(--hue), 50%, 80%, 0.15);
+  mask-image: radial-gradient(circle at center, black 65%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black 65%, transparent 80%);
+  filter: drop-shadow(0 0 40px var(--primary-glow));
   position: relative;
   z-index: 1;
-  transform: translateY(0); /* Removed translateY so it sits perfectly on flex-end */
+  transform: translateY(0);
 }
 
 /* Right Column */
@@ -595,17 +584,26 @@ nav a.active {
 }
 
 .skill-item {
-  background: var(--bg-card);
-  padding: 0.75rem 1.25rem;
+  background: hsla(var(--hue), 30%, 15%, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.8rem 1.4rem;
   border-radius: 50px;
-  border: 1px solid var(--glass-border);
-  font-size: 0.9rem;
+  border: 1px solid hsla(var(--hue), 60%, 80%, 0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2), inset 0 0 15px hsla(var(--hue), 100%, 70%, 0.05);
+  font-size: 0.95rem;
+  font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+  gap: 0.6rem;
+  transition: background 0.4s, border-color 0.4s, box-shadow 0.4s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   animation: bubbleFloat var(--float-duration, 6s) ease-in-out var(--float-delay, 0s) infinite alternate;
   will-change: transform;
+}
+
+.skill-item i {
+  font-size: 1.25rem;
+  color: var(--text-main);
 }
 
 @keyframes bubbleFloat {
@@ -615,13 +613,11 @@ nav a.active {
   100% { transform: translate(var(--x1, -3px), var(--y1, 4px)); }
 }
 
-.skill-item i {
-  font-size: 1.25rem;
-}
-
 .skill-item:hover {
   border-color: var(--secondary);
-  background: var(--bg-card-hover);
+  background: hsla(var(--hue), 40%, 20%, 0.6);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4), inset 0 0 20px hsla(var(--hue), 100%, 70%, 0.15);
+  transform: translateY(-5px) scale(1.05) !important;
 }
 
 .skill-item.highlight {
