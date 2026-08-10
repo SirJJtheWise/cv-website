@@ -1088,3 +1088,74 @@ nav a.active {
 }
 
 .email-pill:hover { border-color: var(--primary); }
+
+
+/* --- Mobile Responsive Fixes --- */
+@media screen and (max-width: 768px) {
+  /* Hero Section */
+  #hero.hero-mockup {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 8rem 1rem 3rem;
+  }
+  
+  .hero-left, .hero-center, .hero-right {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+  
+  .hero-socials {
+    flex-wrap: wrap;
+    justify-content: flex-start !important;
+  }
+  
+  .hero-name {
+    font-size: 2.8rem;
+  }
+  
+  /* Timeline Fixes */
+  .timeline-container::after {
+    left: 20px;
+  }
+  
+  .timeline-progress {
+    left: 20px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 15px;
+  }
+  
+  .timeline-item.right {
+    left: 0;
+  }
+  
+  .timeline-item.left::after, .timeline-item.right::after {
+    left: 10px;
+    right: auto;
+  }
+  
+  .timeline-content {
+    padding-top: 2.5rem;
+  }
+  
+  .timeline-item.left .timeline-date, .timeline-item.right .timeline-date {
+    right: auto;
+    left: 1.5rem;
+    top: 1rem;
+  }
+  
+  /* Nav Fixes */
+  nav {
+    width: 95%;
+    padding: 0.6rem 1rem;
+  }
+  nav ul {
+    gap: 0.5rem;
+  }
+  nav a {
+    font-size: 0.8rem;
+  }
+}
