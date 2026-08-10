@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon-CjpcPKQS.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO & Meta -->
@@ -14,7 +14,7 @@
   <!-- Devicon for logos -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   
-  <!-- Styles -->
+  <!-- Styles -->
 
   <!-- Open Graph Meta Tags for LinkedIn Preview -->
   <meta property="og:title" content="Jason Mann - Professional Portfolio" />
@@ -22,9 +22,9 @@
   <meta property="og:image" content="https://sirjjthewise.github.io/cv-website/profile.jpg" />
   <meta property="og:url" content="https://sirjjthewise.github.io/cv-website/" />
   <meta property="og:type" content="website" />
-  <script type="module" crossorigin src="./assets/main-Dq7iai9Z.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/style-D_sPiNBc.js">
-  <link rel="stylesheet" crossorigin href="./assets/style-C66ELvgd.css">
+  <script type="module" crossorigin src="./assets/main-KD1uYXlS.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/style-DVotS1u9.js">
+  <link rel="stylesheet" crossorigin href="./assets/style-CiI251NT.css">
 </head>
 
 <body>
@@ -74,20 +74,21 @@
     <!-- Abstract Background Elements -->
     <div class="bg-circle-large"></div>
     <div class="floating-shape shape-1"></div>
-    <div class="floating-shape shape-2"></div>
+    <!-- Removed shape-2 -->
     
     <!-- Left Column: Typography & Links -->
     <div class="hero-left">
       <h2 class="hero-greeting">Hello, I'm</h2>
-      <h1 class="hero-name">JASON MANN</h1>
+      <h1 class="hero-name"><span style="color: #3A382F;">JASON</span> <span style="color: var(--primary);">MANN</span></h1>
+      <p style="font-size: 1.25rem; font-weight: 500; color: #3A382F; margin-top: -0.25rem; margin-bottom: 0.5rem;">Software Engineer &middot; AI & HPC</p>
       <p class="hero-desc">
         Master of Science Informatics student at TUM. Passionate about AI, High Performance Computing, and building software that shapes the future.
       </p>
+      <a href="#projects" class="btn btn-primary" style="margin-top: 1rem; width: fit-content; border-radius: 8px;">View projects</a>
       <div class="hero-socials">
-        <div class="email-pill">
+        <a href="mailto:4jasonmann@gmail.com" class="email-pill">
           <span>4jasonmann@gmail.com</span>
-        </div>
-        <a href="mailto:4jasonmann@gmail.com" class="social-icon-btn">@</a>
+        </a>
         <a href="https://github.com/SirJJtheWise" target="_blank" class="social-icon-btn"><i class="devicon-github-original"></i></a>
         <a href="https://www.linkedin.com/in/jason-mann-8aa846222/" target="_blank" class="social-icon-btn"><i class="devicon-linkedin-plain"></i></a>
       </div>
@@ -98,22 +99,6 @@
       <img src="./profile.jpg" alt="Jason Mann" class="hero-subject">
     </div>
 
-    <!-- Right Column: Floating Cards -->
-    <div class="hero-right">
-      <div class="hero-card card-1">
-        <div class="card-icon-container"><i class="devicon-python-plain colored"></i></div>
-        <span>AI & LLMs Developer</span>
-      </div>
-      <div class="hero-card card-2">
-        <div class="card-icon-container"><i class="devicon-cplusplus-plain colored"></i></div>
-        <span>HPC Specialist</span>
-      </div>
-      <div class="hero-card card-3">
-        <div class="card-icon-container"><i class="devicon-react-original colored"></i></div>
-        <span>Fullstack Engineer</span>
-      </div>
-    </div>
-    
     <div class="scroll-indicator">
       <a href="#projects" class="scroll-link">
         <span class="scroll-text">Scroll Down</span>
@@ -125,10 +110,10 @@
   <!-- Projects Section -->
   <section id="projects">
     <h2 class="section-title">Experience & Projects</h2>
-    <div class="grid-layout" id="projects-grid">
+    <div class="mixed-layout" id="projects-grid">
 
       <!-- Project: Kako AI -->
-      <article class="project-card">
+      <article class="project-card featured">
         <div class="video-container">
           <img src="./bom_table_edit_new.png" alt="Kako AI BOM Extraction" style="width:100%; height:100%; object-fit:cover;">
         </div>
@@ -191,7 +176,7 @@
       </article>
 
       <!-- Project 2: HPC -->
-      <article class="project-card">
+      <article class="project-card list-item">
         <div class="video-container">
           <img src="./HPC image.png" alt="HPC Optimization" style="width:100%; height:100%; object-fit:cover;">
         </div>
@@ -232,7 +217,7 @@
       </article>
 
       <!-- Work Experience: WWK -->
-      <article class="project-card">
+      <article class="project-card list-item">
         <div class="video-container">
           <img src="./WWk_logo.png" alt="WWK Logo" style="width:100%; height:100%; object-fit:cover;">
         </div>
@@ -277,7 +262,7 @@
 
   <!-- Timeline Section -->
   <section id="timeline">
-    <h2 class="section-title" style="text-align:center; margin-bottom: 3rem;">Journey & Milestones</h2>
+    <h2 class="section-title" style="margin-bottom: 3rem;">Journey & Milestones</h2>
 
     <div class="timeline-container">
       <div class="timeline-progress" id="timeline-progress"></div>
@@ -495,7 +480,7 @@
   <footer style="text-align:center; padding: 2rem; opacity: 0.5; font-size: 0.8rem;">
     &copy; 2026 Jason Mann. Built with Vite.
   </footer>
-
+
 </body>
 
 </html>
