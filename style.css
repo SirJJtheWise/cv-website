@@ -482,6 +482,10 @@ nav a.active {
   }
   
   .card-1, .card-2, .card-3 { transform: translateX(0); }
+  
+  .scroll-indicator {
+    display: none !important;
+  }
 }
 
 .scroll-indicator {
@@ -1174,6 +1178,6 @@ nav a.active {
   
   /* Hide Scroll Indicator */
   .scroll-indicator {
-    display: none;
+    display: none !important;
   }
 }
