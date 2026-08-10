@@ -350,6 +350,7 @@ nav a.active {
   display: flex;
   align-items: center;
   white-space: nowrap;
+  flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   color: #3A382F;
   text-decoration: none;
@@ -1169,5 +1170,10 @@ nav a.active {
   }
   nav a {
     font-size: 0.8rem;
+  }
+  
+  /* Hide Scroll Indicator */
+  .scroll-indicator {
+    display: none;
   }
 }
