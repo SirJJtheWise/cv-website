@@ -1,23 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
 :root {
-  /* Premium Dark Theme Palette */
-  --hue: 250;
-  /* Deep Purple Base */
-  --bg-dark: hsl(var(--hue), 30%, 8%);
-  --bg-card: hsl(var(--hue), 25%, 12%);
-  --bg-card-hover: hsl(var(--hue), 25%, 16%);
+  --bg-dark: #FAF8F4;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F2EFE8;
 
-  --primary: hsl(var(--hue), 100%, 70%);
-  --primary-glow: hsla(var(--hue), 100%, 70%, 0.4);
-  --secondary: hsl(190, 100%, 70%);
-  /* Cyan accent */
+  --primary: #2F5D3A;
+  --primary-glow: rgba(47, 93, 58, 0.15);
+  --secondary: #2F5D3A;
 
-  --text-main: hsl(var(--hue), 20%, 95%);
-  --text-muted: hsl(var(--hue), 15%, 70%);
+  --text-main: #1a201c;
+  --text-muted: #4b5950;
 
-  --glass-bg: hsla(var(--hue), 30%, 10%, 0.7);
-  --glass-border: hsla(var(--hue), 20%, 95%, 0.1);
+  --glass-bg: rgba(250, 248, 244, 0.85);
+  --glass-border: rgba(47, 93, 58, 0.15);
 
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -25,7 +21,7 @@
 
   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
-  font-family: 'Outfit', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   line-height: 1.6;
   color: var(--text-main);
   background-color: var(--bg-dark);
@@ -53,9 +49,7 @@ html {
 body {
   overflow-x: hidden;
   min-height: 100vh;
-  background-image:
-    radial-gradient(circle at 15% 50%, hsla(var(--hue), 50%, 25%, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 85% 30%, hsla(190, 50%, 25%, 0.15) 0%, transparent 50%);
+  background-color: var(--bg-dark);
 }
 
 h1,
@@ -64,10 +58,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #fff;
+  color: var(--text-main);
 }
 
 a {
@@ -81,7 +75,7 @@ ul {
 }
 
 section {
-  padding: 6rem 1rem;
+  padding: 4rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -98,11 +92,9 @@ section {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--primary);
   display: inline-block;
+  font-weight: 700;
 }
 
 .btn {
@@ -121,8 +113,8 @@ section {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: var(--bg-dark);
+  background: var(--primary);
+  color: #fff;
 }
 
 .btn-primary:hover {
@@ -140,13 +132,71 @@ section {
   background: hsla(var(--hue), 100%, 70%, 0.1);
 }
 
+
+.mixed-layout {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .mixed-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+  .mixed-layout .featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  .mixed-layout .featured .project-info {
+    padding: 2rem 3rem;
+  }
+  .mixed-layout .list-item {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    align-items: center;
+  }
+}
+
 .grid-layout {
   display: grid;
   gap: 2rem;
 }
 
 @media (min-width: 768px) {
-  .grid-layout {
+  
+.mixed-layout {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .mixed-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+  .mixed-layout .featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  .mixed-layout .featured .project-info {
+    padding: 2rem 3rem;
+  }
+  .mixed-layout .list-item {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    align-items: center;
+  }
+}
+
+.grid-layout {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
@@ -200,12 +250,12 @@ nav a.active {
 
 #hero.hero-mockup {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  padding: 8rem 2rem 2rem;
-  overflow: hidden; /* for abstract shapes */
+  gap: 4rem;
+  padding: 10rem 2rem 4rem;
+  overflow: hidden;
 }
 
 /* Background Abstract Elements */
@@ -273,11 +323,9 @@ nav a.active {
   font-weight: 800;
   line-height: 1;
   margin-bottom: 0.5rem;
-  background: linear-gradient(to right, #fff, var(--text-muted));
-  -webkit-background-clip: text;
-  color: transparent;
+  color: var(--primary);
   letter-spacing: -2px;
-  text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  
 }
 
 .hero-desc {
@@ -403,10 +451,14 @@ nav a.active {
 /* Responsive adjustments */
 @media screen and (max-width: 992px) {
   #hero.hero-mockup {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 3rem;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 10rem 2rem 4rem;
+  overflow: hidden;
+}
   
   .hero-left {
     align-items: center;
@@ -625,7 +677,7 @@ nav a.active {
   background: hsla(var(--hue), 30%, 20%, 0.5);
   box-shadow: 0 0 15px var(--primary-glow);
   font-weight: 600;
-  color: #fff;
+  color: var(--text-main);
   font-size: 1rem;
 }
 
@@ -950,14 +1002,46 @@ nav a.active {
     max-width: 300px; /* constrain cards */
   }
   #hero.hero-mockup {
-    padding-top: 6rem;
-    gap: 2rem;
-    min-height: auto; /* Allow natural stacking without forcing 100vh if it's taller */
-    padding-bottom: 6rem; /* space for scroll indicator */
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 10rem 2rem 4rem;
+  overflow: hidden;
+}
   
   /* Project grid fix to prevent horizontal scrolling */
-  .grid-layout {
+  
+.mixed-layout {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .mixed-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+  .mixed-layout .featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  .mixed-layout .featured .project-info {
+    padding: 2rem 3rem;
+  }
+  .mixed-layout .list-item {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    align-items: center;
+  }
+}
+
+.grid-layout {
     grid-template-columns: 1fr;
   }
   
@@ -991,4 +1075,8 @@ nav a.active {
     padding-right: 0;
     margin-top: 1.2rem;
   }
+}
+.section-title {
+  text-align: left;
+  margin-bottom: 2rem;
 }
