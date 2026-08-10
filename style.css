@@ -88,7 +88,7 @@ section {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .gradient-text {
@@ -323,14 +323,12 @@ nav a.active {
   font-weight: 800;
   line-height: 1;
   margin-bottom: 0.5rem;
-  color: var(--primary);
   letter-spacing: -2px;
-  
 }
 
 .hero-desc {
   font-size: 1.1rem;
-  color: var(--text-muted);
+  color: #3A382F;
   max-width: 90%;
   line-height: 1.6;
 }
@@ -352,6 +350,9 @@ nav a.active {
   display: flex;
   align-items: center;
   white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  color: #3A382F;
+  text-decoration: none;
 }
 
 .social-icon-btn {
@@ -366,13 +367,13 @@ nav a.active {
   font-size: 1.2rem;
   text-decoration: none;
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 5px 15px var(--primary-glow);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   flex-shrink: 0; /* prevent squishing */
 }
 
 .social-icon-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px var(--primary-glow);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   color: var(--bg-dark);
 }
 
@@ -396,13 +397,12 @@ nav a.active {
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid hsla(var(--hue), 50%, 80%, 0.15);
-  mask-image: radial-gradient(circle at center, black 65%, transparent 80%);
-  -webkit-mask-image: radial-gradient(circle at center, black 65%, transparent 80%);
-  filter: drop-shadow(0 0 40px var(--primary-glow));
   position: relative;
   z-index: 1;
   transform: translateY(0);
+
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  border: 2px solid var(--primary);
 }
 
 /* Right Column */
@@ -982,7 +982,10 @@ nav a.active {
     max-width: 250px;
     border-width: 1px;
     filter: drop-shadow(0 0 20px var(--primary-glow));
-  }
+  
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  border: 2px solid var(--primary);
+}
   .hero-socials {
     flex-wrap: wrap;
     justify-content: center;
@@ -991,7 +994,10 @@ nav a.active {
   .email-pill {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
-  }
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  color: #3A382F;
+  text-decoration: none;
+}
   .hero-right {
     grid-column: 1;
     align-items: center;
@@ -1080,3 +1086,5 @@ nav a.active {
   text-align: left;
   margin-bottom: 2rem;
 }
+
+.email-pill:hover { border-color: var(--primary); }
