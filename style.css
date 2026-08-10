@@ -28,6 +28,55 @@
 }
 
 /*****************
+ *  PRELOADER
+ *****************/
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Use -webkit-fill-available to fix mobile browser URL bar gaps */
+  height: -webkit-fill-available;
+  background-color: var(--bg-dark);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.preloader-logo {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -2px;
+}
+
+.preloader-edge {
+  position: absolute;
+  background: var(--primary);
+  transition: width 0.1s linear, height 0.1s linear;
+}
+
+.preloader-top { top: 0; left: 0; height: 4px; width: 0; }
+.preloader-right { top: 0; right: 0; width: 4px; height: 0; }
+.preloader-bottom { bottom: 0; right: 0; height: 4px; width: 0; }
+.preloader-left { bottom: 0; left: 0; width: 4px; height: 0; }
+
+/*****************
  *  RESET & BASE
  *****************/
 * {
