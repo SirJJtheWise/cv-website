@@ -1099,9 +1099,21 @@ nav a.active {
     padding: 8rem 1rem 3rem;
   }
   
-  .hero-left, .hero-center, .hero-right {
+  .hero-left {
     align-items: flex-start !important;
     justify-content: flex-start !important;
+  }
+
+  .hero-center {
+    order: -1; /* Move photo to the top */
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100%;
+    margin-bottom: -1rem; /* bring text a bit closer */
+  }
+
+  .hero-subject {
+    max-width: 220px !important; /* Make the head smaller on mobile */
   }
   
   .hero-socials {
